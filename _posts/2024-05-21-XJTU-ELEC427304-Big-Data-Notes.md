@@ -7,8 +7,6 @@ tags: [Course Note]  
 math: true  
 toc: true  
 excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
-
-
 ---
 
 
@@ -16,11 +14,10 @@ excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 2024-5-21  
 
 ### Conditional Independence  
-Independent ≠ Uncorrelated  
-e.g. When \( x \in [-1, 1] \), then \( y = x^2 \).This can be expressed as:
+**Independent** ≠ **Uncorrelated**
 
-$$
-\text{Cov}(X, Y) = 0
-$$
+e.g. When \( X \in [-1, 1] \), then \( Y = x^2 \). This can be expressed as:
+
+\[ \text{Cov}(X, Y) = 0 \]
 
 indicating that \( X \) and \( Y \) are **uncorrelated**, even though \( Y \) is completely determined by \( X \).
