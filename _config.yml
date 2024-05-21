@@ -32,11 +32,11 @@ twitter:
   username: vszhub
   card: summary
 logo: logo.png
-social:
-  name: Sihan Gao    
-  links:
-    - https://x.com/Sihan0229
-    - https://github.com/Sihan0229
+# social:
+#   name: Sihan Gao    
+#   links:
+#     - https://x.com/Sihan0229
+#     - https://github.com/Sihan0229
 google_site_verification: xxxxx
 lang: en
 
