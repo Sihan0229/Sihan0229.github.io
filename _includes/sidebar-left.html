@@ -22,11 +22,11 @@
       <li class="navigation-item">
         <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="{{ nav.url | relative_url }}">{{ nav.title | escape }}</a>
       </li>
-    {%- endfor %}
+    {%- endfor -%}
     </ul>
   </nav>
-  {%- endif %}
-  {# {% if site.data.social -%}
+  {%- endif -%}
+  {% if site.data.social -%}
     <div class="social pure-menu pure-menu-horizontal">
       <ul class="social-icons pure-menu-list">
       {% for social in site.data.social -%}
@@ -38,5 +38,5 @@
       {%- endfor %}
       </ul>
     </div>
-  {%- endif %} #}
+  {%- endif %}
 </header>
