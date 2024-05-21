@@ -2,16 +2,16 @@
 title: Sihan's Blog    
 description: Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house.
 url: https://Sihan0229.github.io
-avatar: /ava.jpg
+# avatar: /ava.jpg
 paginate: 5 
 permalink: pretty  
-cover_image: /gshbg.jpeg
+cover_image: /gsh_bg.jpeg  
 
 # Gems
 plugins:
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-seo-tag
+  - jekyll-seo-tag  
   - jekyll-feed
   - jekyll-sitemap
 
