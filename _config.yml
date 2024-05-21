@@ -1,10 +1,10 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
-avatar: /avatar.jpeg
-paginate: 5
-permalink: pretty
+title: Sihan's Blog    
+description: Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house.
+url: https://Sihan0229.github.io
+avatar: /avatar.jpeg  
+paginate: 5 
+permalink: pretty  
 cover_image: /bg.jpeg
 
 # Gems
@@ -35,8 +35,8 @@ logo: logo.png
 social:
   name: Songzi Vong
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://x.com/Sihan0229
+    - https://github.com/Sihan0229
 google_site_verification: xxxxx
 lang: en
 
@@ -54,6 +54,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Sihan Gao
+  url: https://github.com/Sihan0229    
+  email: sihangao2004@gmail.com
