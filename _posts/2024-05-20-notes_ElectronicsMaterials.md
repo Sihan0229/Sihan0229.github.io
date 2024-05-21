@@ -7,7 +7,8 @@ tags: [Course Note]
 math: true
 toc: true
 ---
-Notes of XJTU-ELEC42300407 Electronics Materials Notes{: .message }
+Notes of XJTU-ELEC42300407 Electronics Materials Notes
+{: .message }
 
 # Chapter 6 磁性材料
 磁体：具有或可使其具有外磁场的物体或器件<br>
