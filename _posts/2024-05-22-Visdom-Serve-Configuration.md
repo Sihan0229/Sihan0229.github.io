@@ -30,12 +30,13 @@ It's Alive!
 INFO:root:Application Started
 INFO:root:Working directory: /root/.visdom
 You can navigate to http://localhost:8097
-
 ```
 
 **使用SSH链接映射到本地**
 
-此处参考了[服务器visdom的本地显示](https://blog.csdn.net/weixin_43702653/article/details/127273564)，但是与该博客不同的是，本地打开"http://localhost:8097/"网址才成功映射。
+此处参考了[服务器visdom的本地显示](https://blog.csdn.net/weixin_43702653/article/details/127273564)，但是与该博客不同的是，本地打开“http://localhost:8097/”网址才成功映射。
+
+例如Autodl登陆指令为`ssh -p 44789 root@connect.westc.gpuhub.com`，则只需要在`ssh`和`-p`之间添加`-L 8080:localhost:8097`即可
 
 ```bash
 ssh -L 8080:localhost:8097  -p 44789 root@connect.westc.gpuhub.com
