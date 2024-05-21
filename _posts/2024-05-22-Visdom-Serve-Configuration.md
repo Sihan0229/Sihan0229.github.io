@@ -1,16 +1,16 @@
 ---
 layout: post  
-title: "Visdom Serve在Autodl服务器上的配置"  
+title: "Visdom Server在Autodl服务器上的配置"  
 date: 2024-05-22 00:10 +0800  
 last_modified_at: 2024-05-22 00:10 +0800  
 tags: [configuration]  
-math: true  
+math: true  r
 toc: true  
-excerpt: "解决Visdom Serve在远程服务器上的配置问题"
+excerpt: "解决Visdom Server在远程服务器上的配置问题"
 ---
 
 **下载安装**
-
+r
 ```bash
 pip install visdom
 ```
