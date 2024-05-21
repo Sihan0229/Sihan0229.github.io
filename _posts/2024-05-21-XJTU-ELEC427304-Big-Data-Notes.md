@@ -1,11 +1,10 @@
 ---
-layout: post           
-title: XJTU-ELEC427304 Big Data Notes           
-date: 2024-05-21 19:18 +0800           
-last_modified_at: 2024-05-21 19:18 +0800           
-tags: [jekyll theme, jekyll, tutorial]           
-toc:  true             
+layout: post
+title: "XJTU-ELEC427304 Big Data Notes"
+date: 2024-05-21 19:18 +0800
+last_modified_at: 2024-05-21 19:18 +0800
+tags: [Course Note]
+toc: true
 ---
-Course notes of XJTU-ELEC427304                  
-
-### Lecture 8 (2024-05-21)
+### Lecture 8
+2024-5-21
