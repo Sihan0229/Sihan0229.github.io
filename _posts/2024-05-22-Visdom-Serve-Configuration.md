@@ -10,7 +10,7 @@ excerpt: "解决Visdom Server在远程服务器上的配置问题"
 ---
 
 **下载安装**
-r
+
 ```bash
 pip install visdom
 ```
@@ -44,5 +44,4 @@ ssh -L 8080:localhost:8097  -p 44789 root@connect.westc.gpuhub.com
 
 现在已经可以成功进入Visdom界面了，显示内容为
 
-![Visdom界面](assets\visdom_1.png)
-
+![Visdom界面](https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/visdom_1.png)
