@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: "Visdom Server在Autodl服务器上的配置"  
+title: "Visdom Server在Autodl服务器上的配置（填坑）"  
 date: 2024-05-22 00:10 +0800  
 last_modified_at: 2024-05-22 00:10 +0800  
 tags: [configuration]  
@@ -41,3 +41,8 @@ You can navigate to http://localhost:8097
 ```bash
 ssh -L 8080:localhost:8097  -p 44789 root@connect.westc.gpuhub.com
 ```
+
+现在已经可以成功进入Visdom界面了，显示内容为
+
+![Visdom界面](assets\visdom_1.png)
+
