@@ -4,7 +4,14 @@ title: "XJTU-ELEC427304 Big Data Notes"
 date: 2024-05-21 19:18 +0800
 last_modified_at: 2024-05-21 19:18 +0800
 tags: [Course Note]
+math: true
 toc: true
 ---
 ### Lecture 8
 2024-5-21
+
+
+$$
+i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}
+\frac{\partial^2 \Psi}{\partial x^2} + V \Psi
+$$
