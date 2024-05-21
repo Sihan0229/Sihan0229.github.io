@@ -15,11 +15,34 @@ excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 **Source & Materials**:[KDnuggets](https://www.kdnuggets.com/), [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets.php)
 
 **Framework of ML**
-Step 1:function with unknown \\(y=f_\theta(\mathbit{x}) \\)
+Step 1:function with unknown \\(y=f_\theta(x) \\)
 
 Step 2: define loss from training data \\( L(\theta) \\)
 
 Step 3: optimization \\( \theta^* = \arg \min_{\theta} \mathcal{L} \\)
+
+**DM Techniques - Classification**:  Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
+
+**Evaluation method of model**: hold-out, cross-validation, boostrapping
+Error rate
+
+accuracy
+
+Precision, recall and F1
+
+ROC and AUC
+
+Cost-sensitive error rate and cost curve
+
+**DM Techniques - Classification**: K-Means, Sequential Leader, Affinity Propagation
+
+**DM Techniques – Association Rule**
+
+**DM Techniques – Regression**
+
+**Overfitting** 
+
+# Data Preprocessing
 
 ## Conditional Independence   
 **Independent** ≠ **Uncorrelated**
