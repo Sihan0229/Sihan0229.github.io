@@ -5,7 +5,7 @@ url: https://Sihan0229.github.io
 avatar: /avatar.jpeg  
 paginate: 5 
 permalink: pretty  
-cover_image: /bg.jpeg
+cover_image: /gshbg.jpeg
 
 # Gems
 plugins:
@@ -33,7 +33,7 @@ twitter:
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Sihan Gao    
   links:
     - https://x.com/Sihan0229
     - https://github.com/Sihan0229
