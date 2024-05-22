@@ -1,8 +1,8 @@
 ---
 layout: post  
 title: "VScode中下载了插件但是无法找到SSH Target连接服务器的解决方法"  
-date: 2024-05-22 00:10 +0800  
-last_modified_at: 2024-05-22 00:10 +0800  
+date: 2024-03-14 00:10 +0800  
+last_modified_at: 2024-03-14 00:10 +0800  
 tags: [configuration]  
 math: true  r
 toc: true  
