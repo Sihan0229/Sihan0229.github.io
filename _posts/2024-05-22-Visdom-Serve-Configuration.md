@@ -44,6 +44,6 @@ ssh -L 8080:localhost:8097  -p 44789 root@connect.westc.gpuhub.com
 
 现在已经可以成功进入Visdom界面了，显示内容为
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/visdom_1.png?raw=true" width="50%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/visdom_1.png?raw=true" width="100%">
 
 然后新建一个bash终端来运行程序。
