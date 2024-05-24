@@ -52,3 +52,21 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 \\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
 
 
+## ID3 Framework
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3Framework.png?raw=true" width="100%">
+
++ 叶节点为纯节点，stop.
+
++ 叶节点为空节点，如何决定该节点的分类？根据父节点的比例
+
++ 属性用完了也无法分类：树无法生长，根据占优比例决定类别。
+
+**奥卡姆剃刀**：倾向于选择更简单的模型
+
+**over fitting**：泛化误差小，测试误差大。
+（额外划出Validation Set来判定是否过拟合）
+
+解决：早停，Loss加入正则项，利用新模型
+
+**剪枝**：

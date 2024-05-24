@@ -33,4 +33,4 @@ I searched online and found some advices about changing the version of extension
 
 
 
-<img src="https://img2023.cnblogs.com/blog/3291996/202309/3291996-20230930230545779-1451890038.png" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sshVScode.png?raw=true" width="100%">
