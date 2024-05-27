@@ -10,3 +10,7 @@ excerpt: "修改~/.ssh文件夹下的config与known_hosts"
 ---
 
 在`C:\Users\[your username]]\.ssh\`用户名下有`config`和`known_hosts`两个文件，在文件中完整删除与该服务器相关的行即可
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ssh_config.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ssh_known_hosts.png?raw=true" width="100%">
