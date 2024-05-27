@@ -64,9 +64,15 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 **奥卡姆剃刀**：倾向于选择更简单的模型
 
-**over fitting**：泛化误差小，测试误差大。
-（额外划出Validation Set来判定是否过拟合）
+**over fitting**：泛化误差小，测试误差大（额外划出Validation Set来判定是否过拟合）
 
 解决：早停，Loss加入正则项，利用新模型
 
-**剪枝**：
+决策树解决过拟合的方法：**剪枝**
++ 预剪枝：生成决策树时，对每个节点在划分前先进行估计，若不能带来泛化性能的提升，则停止划分。（主要用到的标准是验证集的精度）
++ 后剪枝:生成完整的决策树，自底向上向叶节点进行考察，若该节点对应的子树替换成叶节点能带来泛化性能的提升，则替换成叶节点。
+
+**Entropy Bias**
+
+信息增益率
+\\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
