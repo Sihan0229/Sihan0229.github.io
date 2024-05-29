@@ -3,7 +3,7 @@ layout: post
 title: "Autodl服务器更换镜像后无法连接VScode"  
 date: 2024-05-27 00:10 +0800  
 last_modified_at: 2024-05-27 00:10 +0800  
-tags: [Computer Vision]  
+tags: [configuration]  
 math: true  r
 toc: true  
 excerpt: "修改~/.ssh文件夹下的config与known_hosts"
