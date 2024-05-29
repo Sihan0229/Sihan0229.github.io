@@ -23,7 +23,7 @@
   const checkScroll = strip(window.location.pathname, '/') !== strip('{{ site.baseurl }}', '/');
 
   if (forceCheckScroll || checkScroll) {
-    const maxWidth = "(max-width: 64rem)";
+    const maxWidth = "(max-width: 48rem)";
     const result = window.matchMedia(maxWidth);
     if (result.matches) {
       scroll();
