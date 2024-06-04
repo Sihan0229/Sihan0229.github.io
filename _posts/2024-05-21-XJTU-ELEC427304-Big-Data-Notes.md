@@ -78,6 +78,13 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 \\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
 
 # Convolutional Neural Networks
+
 ## Backpropagation 反向传播
+
+## FUlly connected layers
+参数量
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/bd_fc_num.png?raw=true" width="100%">
+
 ## Convolution arithmetic 卷积
 ## Pooling arithmetic 池化
