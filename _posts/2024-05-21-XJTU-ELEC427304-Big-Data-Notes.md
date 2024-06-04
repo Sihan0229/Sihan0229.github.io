@@ -76,3 +76,8 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 信息增益率
 \\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
+
+# Convolutional Neural Networks
+## Backpropagation 反向传播
+## Convolution arithmetic 卷积
+## Pooling arithmetic 池化
