@@ -88,3 +88,6 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 ## Convolution arithmetic 卷积
 ## Pooling arithmetic 池化
+
+# Classifier
+## Linear Classifier
