@@ -10,27 +10,66 @@ excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 ---
 
 # Introduction
-**Data Types**:Continuous, Binary, Discrete, String, Symbolic
 
-**Source & Materials**:[KDnuggets](https://www.kdnuggets.com/), [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets.php)
+**PAC - probably Approximately Correct learning model** 
+
+$P(|f(x)-y|\le \epsilon)\ge 1-\delta$
+
+**Data Types** 
++ Continuous, Binary
++ Discrete, String
++ Symbolic
+
+**Big Data** is high-volume, high-velocity, high-variety, demanding cost-effective, innovative forms of imformation processing, whose size is beyongd the ability of typical database software tools to capture, store, manage, and analyze.
+
+**Data Mining** is the process of discovering patterns in large data set, including intersection of ML, statistic and database systems.
+
+习题1：大数据的特点包括类型多、对处理实时性要求高、容量大
+
+习题2：理想的数据挖掘算法得到的结果应该是：Useful, Hidden, Interesting
+
+**Source & Materials**
+[KDnuggets](https://www.kdnuggets.com/), [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets.php)
 
 **Framework of ML**
-Step 1:function with unknown \\(y=f_\theta(x) \\)
 
-Step 2: define loss from training data \\( L(\theta) \\)
++ Step 1: function with unknown $y=f_\theta(x)$
++ Step 2: define loss from training data $L(\theta)$
++ Step 3: optimization $\theta^* = \arg \min_{\theta} \mathcal{L}$
 
-Step 3: optimization \\( \theta^* = \arg \min_{\theta} \mathcal{L} \\)
+**DM Techniques - Classification**
+Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
 
-**DM Techniques - Classification**:  Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
+# Evaluation method of model
 
-**Evaluation method of model**: hold-out, cross-validation, boostrapping
-Error rate
+## Data Segmentation
 
-accuracy
+**hold-out 留出法** 保持数据分布一致性，多次重复随机划分，测试集不能太大、不能太小
 
-Precision, recall and F1
+**cross-validation 交叉验证法** k折交叉验证
 
-ROC and AUC
+**boostrapping 自助法** 有放回/可重复采样，数据分布有所改变，训练集与原样本集同规模
+（包外估计 out-of-bag estimation）
+
+## Model performance
+**Error rate 错误率** $E(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)≠𝑦)$
+
+**accuracy 精度** $Acc(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)=𝑦)=1-E(𝑓;𝐷)$
+
+**Precision 查准率** $P=\frac{TP}{TP+FP}$
+
+**recall 查全率** $R=\frac{TP}{TP+FN}$
+
+**F1** $\frac{1}{F_1}=\frac{1}{2}(\frac{1}{R}+\frac{1}{P})$
+
+**Fβ** $\frac{1}{F_\beta}=\frac{1}{1+\beta^2}(\frac{\beta^2}{R}+\frac{1}{P})$
+
+**Confusion Matrix 混淆矩阵**
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ConfusionMatrix.png?raw=true" width="100%">
+
+**ROC**
+
+**AUC**
 
 Cost-sensitive error rate and cost curve
 
@@ -91,3 +130,11 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 # Classifier
 ## Linear Classifier
+## SVM 支持向量机
+$ y_i(w\cdot x_i+b)-1\ge 0 $ <br>
+$ a_i \ge 0 $ <br>
+$ a_i[y_i(w\cdot x_i+b)-1]=0 $ <br>
+
+只有支持向量在起作用
+
+## Soft Margin
