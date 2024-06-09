@@ -1,11 +1,11 @@
 ---
 layout: post  
 title: "XJTU-ELEC427304 Big Data Notes"  
-date: 2024-04-23 19:10 +0800  
-last_modified_at: 2024-05-21 19:18 +0800  
+date: 2024-06-04 19:10 +0800  
+last_modified_at: 2024-06-09 19:18 +0800  
 tags: [Course Note]  
-math: true  
-toc: true  
+math: true  r
+toc: true 
 excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 ---
 
@@ -13,7 +13,9 @@ excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 
 **PAC - probably Approximately Correct learning model** 
 
-$P(|f(x)-y|\le \epsilon)\ge 1-\delta$
+$
+P(|f(x)-y|\le \epsilon)\ge 1-\delta
+$
 
 **Data Types** 
 + Continuous, Binary
@@ -33,9 +35,18 @@ $P(|f(x)-y|\le \epsilon)\ge 1-\delta$
 
 **Framework of ML**
 
-+ Step 1: function with unknown $y=f_\theta(x)$
-+ Step 2: define loss from training data $L(\theta)$
-+ Step 3: optimization $\theta^* = \arg \min_{\theta} \mathcal{L}$
++ Step 1: function with unknown 
+$
+y=f_\theta(x)
+$
++ Step 2: define loss from training data 
+$
+L(\theta)
+$
++ Step 3: optimization 
+$
+\theta^* = \arg \min_{\theta} \mathcal{L}
+$
 
 **DM Techniques - Classification**
 Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
@@ -52,17 +63,35 @@ Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
 （包外估计 out-of-bag estimation）
 
 ## Model performance
-**Error rate 错误率** $E(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)≠𝑦)$
+**Error rate 错误率** 
+$
+E(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)≠𝑦)
+$
 
-**accuracy 精度** $Acc(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)=𝑦)=1-E(𝑓;𝐷)$
+**accuracy 精度** 
+$
+Acc(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)=𝑦)=1-E(𝑓;𝐷)
+$
 
-**Precision 查准率** $P=\frac{TP}{TP+FP}$
+**Precision 查准率** 
+$
+P=\frac{TP}{TP+FP}
+$
 
-**recall 查全率** $R=\frac{TP}{TP+FN}$
+**recall 查全率** 
+$
+R=\frac{TP}{TP+FN}
+$
 
-**F1** $\frac{1}{F_1}=\frac{1}{2}(\frac{1}{R}+\frac{1}{P})$
+**F1** 
+$
+\frac{1}{F_1}=\frac{1}{2}(\frac{1}{R}+\frac{1}{P})
+$
 
-**Fβ** $\frac{1}{F_\beta}=\frac{1}{1+\beta^2}(\frac{\beta^2}{R}+\frac{1}{P})$
+**Fβ** 
+$
+\frac{1}{F_\beta}=\frac{1}{1+\beta^2}(\frac{\beta^2}{R}+\frac{1}{P})
+$
 
 **Confusion Matrix 混淆矩阵**
 
