@@ -65,9 +65,18 @@ Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
 **Fβ** $\frac{1}{F_\beta}=\frac{1}{1+\beta^2}(\frac{\beta^2}{R}+\frac{1}{P})$
 
 **Confusion Matrix 混淆矩阵**
+
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ConfusionMatrix.png?raw=true" width="100%">
 
-**ROC**
+**P-R曲线**
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pr.png?raw=true" width="100%">
+
+**BEP 平衡点 Break-Even Point** 查准率 = 查全率的取值
+
+**ROC 受试者工作特征曲线**
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/roc.png?raw=true" width="100%">
 
 **AUC**
 
@@ -115,6 +124,8 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 信息增益率
 \\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
+
+# Optimization
 
 # Convolutional Neural Networks
 
