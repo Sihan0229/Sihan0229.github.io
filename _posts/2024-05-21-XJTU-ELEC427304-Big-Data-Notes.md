@@ -78,8 +78,15 @@ Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/roc.png?raw=true" width="100%">
 
-**AUC**
+**AUC**：ROC曲线下面积
 
+How to Construct an ROC curve
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/rocCurve.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/rocCurve2.png?raw=true" width="100%">
+
+**Cost Matrix**
 Cost-sensitive error rate and cost curve
 
 **DM Techniques - Classification**: K-Means, Sequential Leader, Affinity Propagation
@@ -103,6 +110,7 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 ## ID3 Framework
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3Framework.png?raw=true" width="100%">
+
 
 + 叶节点为纯节点，stop.
 
