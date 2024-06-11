@@ -8,6 +8,24 @@ math: true  r
 toc: true 
 excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 ---
+<style>
+        /* 全局英文字体设置为 Times */
+        :lang(en) {
+            font-family: Times, serif !important;
+        }
+        
+        /* 全局中文字体设置为默认 */
+        :lang(zh) {
+            font-family: sans-serif !important;
+        }
+
+        /* 具体样式 */
+        h1 { font: 26pt Times !important; }
+        h2 { font: 20pt Times !important; }
+        h3 { font: 16pt Times !important; }
+        p { font: 12pt Times !important; }
+</style>
+
 # Introduction
 
 **PAC - probably Approximately Correct learning model**
@@ -75,7 +93,7 @@ $$
 E(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)≠𝑦)
 $$
 
-**accuracy 精度**
+**Accuracy 精度**
 
 $$
 Acc(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)=𝑦)=1-E(𝑓;𝐷)
@@ -87,7 +105,7 @@ $$
 P=\frac{TP}{TP+FP}
 $$
 
-**recall 查全率**
+**Recall 查全率**
 
 $$
 R=\frac{TP}{TP+FN}
@@ -223,10 +241,31 @@ $${\cal L}_{P} \equiv\frac{1}{2}\Bigl|w\Bigr|^{2}+C\sum_{i=1}^{l}\xi_{i}-\sum_{i
 
 Which kind of $$\varphi(x)$$ can solve this problem?
 
-**Kernel Trick** $$K(x_{i}x_{j})=\varphi(x_{i})*\varphi(x_{j})$$
+**Kernel Trick** 
+
+$$K(x_{i}x_{j})=\varphi(x_{i})*\varphi(x_{j})$$
 
 $$\mathcal{\Phi}\colon\,x\longrightarrow\mathcal{\varphi}(x)$$
 
 $$x_{i}*x_{j}\longrightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
+**Solutions of w & b**
 
+
+问题：在SVM当中进行空间映射的主要目的是:
+- A 降低计算复杂度 （提高）
+- B 提取较为重要的特征
+- C 对原始数据进行标准化
+- D 提高原始问题的可分性 √
+
+问题：对于SVM，在映射后的高维空间直接进行计算的主要问题是:
+- A 模型可解释性差
+- B 计算复杂度高 √
+- C 容易出现奇异矩阵
+- D 容易出现稀疏矩阵
+
+问题：所谓kernel trick，指的是:
+- A 利用在原始空间定义的函数替代高维空间的向量内积操作 √
+- B 利用在高维空间定义的函数替代原始空间的向量内积操作
+- C 核函数的导数具有简单的解析解，简化了运算
+- D 核函数具有固定的上下界，可以输出(-1，+1)区间中的连续值
