@@ -8,12 +8,11 @@ math: true  r
 toc: true 
 excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 ---
-<!-- <style>
+<style>
         h1 { font: 26pt Times !important; }
         h2 { font: 20pt Times !important; }
         h3 { font: 16pt Times !important; }
-        p { font: 12pt Times !important; }
-</style> -->
+</style>
 
 # Introduction
 
