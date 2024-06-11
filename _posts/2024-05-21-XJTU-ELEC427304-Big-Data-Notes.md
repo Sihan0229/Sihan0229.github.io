@@ -8,23 +8,12 @@ math: true  r
 toc: true 
 excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 ---
-<style>
-        /* 全局英文字体设置为 Times */
-        :lang(en) {
-            font-family: Times, serif !important;
-        }
-        
-        /* 全局中文字体设置为默认 */
-        :lang(zh) {
-            font-family: sans-serif !important;
-        }
-
-        /* 具体样式 */
+<!-- <style>
         h1 { font: 26pt Times !important; }
         h2 { font: 20pt Times !important; }
         h3 { font: 16pt Times !important; }
         p { font: 12pt Times !important; }
-</style>
+</style> -->
 
 # Introduction
 
