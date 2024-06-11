@@ -194,9 +194,11 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 ## SVM 支持向量机
 
-$ y_i(w\cdot x_i+b)-1\ge 0 $ `<br>`
-$ a_i \ge 0 $ `<br>`
-$ a_i[y_i(w\cdot x_i+b)-1]=0 $ `<br>`
+$$ y_i(w\cdot x_i+b)-1\ge 0 $$
+
+$$ a_i \ge 0 $$ 
+
+$$ a_i[y_i(w\cdot x_i+b)-1]=0 $$
 
 只有支持向量在起作用
 
