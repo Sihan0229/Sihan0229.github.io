@@ -8,16 +8,16 @@ math: true  r
 toc: true 
 excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
 ---
-
 # Introduction
 
-**PAC - probably Approximately Correct learning model** 
+**PAC - probably Approximately Correct learning model**
 
 $$
 P(|f(x)-y|\le \epsilon)\ge 1-\delta
 $$
 
-**Data Types** 
+**Data Types**
+
 + Continuous, Binary
 + Discrete, String
 + Symbolic
@@ -35,15 +35,20 @@ $$
 
 **Framework of ML**
 
-+ Step 1: function with unknown 
++ Step 1: function with unknown
+
 $$
 y=f_\theta(x)
 $$
-+ Step 2: define loss from training data 
+
++ Step 2: define loss from training data
+
 $$
 L(\theta)
 $$
-+ Step 3: optimization 
+
++ Step 3: optimization
+
 $$
 \theta^* = \arg \min_{\theta} \mathcal{L}
 $$
@@ -63,32 +68,39 @@ Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
 （包外估计 out-of-bag estimation）
 
 ## Model performance
-**Error rate 错误率** 
+
+**Error rate 错误率**
+
 $$
 E(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)≠𝑦)
 $$
 
-**accuracy 精度** 
+**accuracy 精度**
+
 $$
 Acc(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)=𝑦)=1-E(𝑓;𝐷)
 $$
 
-**Precision 查准率** 
+**Precision 查准率**
+
 $$
 P=\frac{TP}{TP+FP}
 $$
 
-**recall 查全率** 
+**recall 查全率**
+
 $$
 R=\frac{TP}{TP+FN}
 $$
 
-**F1** 
+**F1**
+
 $$
 \frac{1}{F_1}=\frac{1}{2}(\frac{1}{R}+\frac{1}{P})
 $$
 
-**Fβ** 
+**Fβ**
+
 $$
 \frac{1}{F_\beta}=\frac{1}{1+\beta^2}(\frac{\beta^2}{R}+\frac{1}{P})
 $$
@@ -129,22 +141,19 @@ Cost-sensitive error rate and cost curve
 # Data Preprocessing
 
 ## Conditional Independence   
+
 **Independent** ≠ **Uncorrelated**
 
-e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\). 
+e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 \\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
-
 
 ## ID3 Framework
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3Framework.png?raw=true" width="100%">
 
-
 + 叶节点为纯节点，stop.
-
 + 叶节点为空节点，如何决定该节点的分类？根据父节点的比例
-
 + 属性用完了也无法分类：树无法生长，根据占优比例决定类别。
 
 **奥卡姆剃刀**：倾向于选择更简单的模型
@@ -154,6 +163,7 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 解决：早停，Loss加入正则项，利用新模型
 
 决策树解决过拟合的方法：**剪枝**
+
 + 预剪枝：生成决策树时，对每个节点在划分前先进行估计，若不能带来泛化性能的提升，则停止划分。（主要用到的标准是验证集的精度）
 + 后剪枝:生成完整的决策树，自底向上向叶节点进行考察，若该节点对应的子树替换成叶节点能带来泛化性能的提升，则替换成叶节点。
 
@@ -169,20 +179,45 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 ## Backpropagation 反向传播
 
 ## FUlly connected layers
+
 参数量
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/bd_fc_num.png?raw=true" width="100%">
 
 ## Convolution arithmetic 卷积
+
 ## Pooling arithmetic 池化
 
 # Classifier
+
 ## Linear Classifier
+
 ## SVM 支持向量机
-$ y_i(w\cdot x_i+b)-1\ge 0 $ <br>
-$ a_i \ge 0 $ <br>
-$ a_i[y_i(w\cdot x_i+b)-1]=0 $ <br>
+
+$ y_i(w\cdot x_i+b)-1\ge 0 $ `<br>`
+$ a_i \ge 0 $ `<br>`
+$ a_i[y_i(w\cdot x_i+b)-1]=0 $ `<br>`
 
 只有支持向量在起作用
 
-## Soft Margin
+### Soft Margin
+
+$$
+y_{i}(w x_{i}+\partial)-1+\xi_{i}\geq0
+$$
+
+$$\Phi(w)=\frac{1}{2}\,w^{t}w+C\sum_{i}\xi_{i}$$
+
+$$\xi_{r}\geq0$$
+
+$${\cal L}_{P} \equiv\frac{1}{2}\Bigl|w\Bigr|^{2}+C\sum_{i=1}^{l}\xi_{i}-\sum_{i=1}^{l}\alpha_{i}[y_{i}(w\cdot x_{i}+b)-1+\xi_{i}]-\sum_{i=1}^{l}\mu_{i}\xi_{i}$$
+
+### 非线性SVMs （Non-linear SVMs）
+
+**Feature Space**：
+向高阶空间进行映射，可以把很多不能用linear SVM解决的问题使用linear SVM解决
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/nonlinearSVMs.png?raw=true" width="100%">
+
+Which kind of $$\Phi(x)$$ can solve this problem?
+
