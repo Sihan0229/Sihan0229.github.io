@@ -111,7 +111,7 @@ $$
 
 **P-R曲线**
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pr.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pr.png?raw=true" width="60%">
 
 **BEP 平衡点 Break-Even Point** 查准率 = 查全率的取值
 
@@ -221,5 +221,12 @@ $${\cal L}_{P} \equiv\frac{1}{2}\Bigl|w\Bigr|^{2}+C\sum_{i=1}^{l}\xi_{i}-\sum_{i
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/nonlinearSVMs.png?raw=true" width="100%">
 
-Which kind of $$\Phi(x)$$ can solve this problem?
+Which kind of $$\varphi(x)$$ can solve this problem?
+
+**Kernel Trick** $$K(x_{i}x_{j})=\varphi(x_{i})*\varphi(x_{j})$$
+
+$$\mathcal{\Phi}\colon\,x\longrightarrow\mathcal{\varphi}(x)$$
+
+$$x_{i}*x_{j}\longrightarrow\varphi(x_{i})*\varphi(x_{j})$$
+
 
