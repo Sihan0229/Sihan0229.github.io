@@ -260,17 +260,28 @@ $$x_{i}*x_{j}\longrightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
 
 
-### 集成学习 
-bagging & boosting
-有放回采样
+# 集成学习 
+
+## bagging
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/bootstrap.png?raw=true" width="100%">
+
+## 有放回采样
 有多少样本没有被勇敢但是被以为是可以test的 OOB
 好处：可以帮我们构建具有分散性的基础分类器
 充分利用所有样本
 
-保证基础分类器多样性的方法
+## 保证基础分类器多样性的方法
 + 算法多样性
 + 训练集（随机又放回采样）
 + 选择不同的属性，决策树中用$$\sqrt{K}$$个属性构造500-5000棵树
 + 超参数
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/bootstrap.png?raw=true" width="100%">
+
+## Stack
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/stack.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/stacking.png?raw=true" width="100%">
+
+## Boosting
