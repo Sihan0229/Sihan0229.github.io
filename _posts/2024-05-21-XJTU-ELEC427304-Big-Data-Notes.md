@@ -285,4 +285,4 @@ $$x_{i}*x_{j}\longrightarrow\varphi(x_{i})*\varphi(x_{j})$$
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/stacking.png?raw=true" width="100%">
 
 ## Boosting
-
+ **Adaboost**
