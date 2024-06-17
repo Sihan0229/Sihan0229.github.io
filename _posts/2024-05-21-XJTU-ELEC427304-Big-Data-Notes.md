@@ -142,15 +142,24 @@ $$
 : Cost of misclassifying class j example as class i
 
 **Cost VS Accuracy**
+
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/cost_vs_accuracy.png?raw=true" width="100%">
+
+**Lift Analysis**
+
+[[模型解釋策略]Lift Chart, Permutation Importance, LIME](https://yulongtsai.medium.com/lift-chart-permutation-importance-lime-c22be8bdaf48)
+
+例题：假设目标客户占人群的5%，现根据用户模型进行打分排序，
+取1000名潜在客户中排名前10%的客户，发现其中包含25名目
+标客户，问此模型在10%处的提升度是多少?
+
+答案：5
 
 **DM Techniques - Classification**: K-Means, Sequential Leader, Affinity Propagation
 
 **DM Techniques – Association Rule**
 
 **DM Techniques – Regression**
-
-**Overfitting** 
 
 # Data Preprocessing
 
