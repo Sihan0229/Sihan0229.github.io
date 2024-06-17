@@ -136,6 +136,14 @@ How to Construct an ROC curve
 **Cost Matrix**
 Cost-sensitive error rate and cost curve
 
+$$
+C(i|j)
+$$
+: Cost of misclassifying class j example as class i
+
+**Cost VS Accuracy**
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/cost_vs_accuracy.png?raw=true" width="100%">
+
 **DM Techniques - Classification**: K-Means, Sequential Leader, Affinity Propagation
 
 **DM Techniques – Association Rule**
