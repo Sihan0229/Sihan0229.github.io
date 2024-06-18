@@ -244,7 +244,13 @@ $$L O F_{k}(A)=\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)/I R D_{k}(A)}{\left|N_{k}(
 
 我們可以看到LOF，他做的事情就是計算A所有**neighbor的**IRD值並且將其平均除以IRD(A)。而LOF在意義上來說，**如果接近1代表，A和其Neighbor的空間密度都非常接近，如果小於1非常多，代表A的密度大於他的neighbor，也就是密度較高的區域，若大於1非常多，則代表A的密度小於他的neighbor。**
 
+**相似度与不相似度** 
++ 相似度: 两个数据对象相似程度的数值测量,对象越相似，相似度越高,通常在 [0,1] 范围内
++ 相异度: 两个数据对象差异程度的数值测量,对象越相似，相似度越低,最小不相似度通常为 0,上限各不相同
 
+简单属性的相似性/不相似性
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/simidissimi.jng?raw=true" width="100%">
 
 
 ## Data Transformation 数据转换
