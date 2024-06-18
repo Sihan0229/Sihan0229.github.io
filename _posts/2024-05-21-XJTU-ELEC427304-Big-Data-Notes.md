@@ -78,13 +78,13 @@ Decision Trees, K-Nearest Neighbours, Neural Networks, Support Vector Machines
 **Error rate 错误率**
 
 $$
-E(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)≠𝑦)
+E(𝑓;𝐷)=\frac{1}{m}\sum_{i=1}^{m}I(f(𝒙_i)≠𝑦)
 $$
 
 **Accuracy 精度**
 
 $$
-Acc(𝑓;𝐷)=\frac{1}{m}\Sigma_{i=1}^{m}I(f(𝒙_i)=𝑦)=1-E(𝑓;𝐷)
+Acc(𝑓;𝐷)=\frac{1}{m}\sum_{i=1}^{m}I(f(𝒙_i)=𝑦)=1-E(𝑓;𝐷)
 $$
 
 **Precision 查准率**
@@ -217,6 +217,8 @@ OUTLINES of Data Preprocessing
 + 手动填写缺失值：重新收集数据或领域知识，繁琐/不可行
 + 自动填写缺失值：全局常数/平均值或中位数/最可能的值
 
+例题：学生小明在调查问卷中没有回答下述问题:“你去年的工资收入和前年相比是否有所增加?”对这种情况最恰当的描述是:N/A
+
 以下参考[劉智皓 (Chih-Hao Liu) 機器學習_學習筆記系列(96)：區域性異常因子(Local Outlier Factor)](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-96-%E5%8D%80%E5%9F%9F%E6%80%A7%E7%95%B0%E5%B8%B8%E5%9B%A0%E5%AD%90-local-outlier-factor-a141c2450d4a)
 
 **Outliers离群点** : Outliers≠Anomaly
@@ -252,9 +254,60 @@ $$L O F_{k}(A)=\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)/I R D_{k}(A)}{\left|N_{k}(
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/simidissimi.jng?raw=true" width="100%">
 
+**distance**
+	
++ Euclidean Distance
+$$dist={\sqrt{\frac{n}{k-1}}}(p_{k}-q_{k})^{2}$$
++ Minkowski Distance
+$$dist=(\sum_{k=1}^{n}|p_{k}-q_{k}|^r)^{1/r}$$
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Minkowski.png?raw=true" width="100%">
+
++ Mahalanobis Distance
+
+$$mahalanobis(p,q)=\sqrt{(p-q)\Sigma^{-1}\left(p-q\right)^{r}}$$
+
+$$\Sigma_{j,k}=\frac{1}{n-1}\sum_{i=1}^{n}(X_{ij}-\overline{{{X}}}_{j})(X_{ik}-\overline{{{X}}}_{j})$$
+
+Duplicate Data重复数据处理方法
+
+Large Data : create keys -> sort -> merge
 
 ## Data Transformation 数据转换
-规范化Normalization、 聚合Aggregation、类型转换。
+现在我们有了一个无错误的数据集，还需要标准化 standardized。类型转换、规范化Normalization、采样、 聚合Aggregation
+
+例如：选取变换$$\phi(x)$$将非线性变为线性、使用独热编码标记类别(不能因为编码而产生新的参数影响，如因为编码1 2 3而导致距离不相等)等
+
+**采样**：什么是采样？
+
+有效抽样的关键原则如下：
++ 如果样本具有代表性，则使用样本的效果几乎与使用整个数据集一样好 
++ 如果样本具有与原始数据集大致相同的属性（感兴趣的），则该样本具有代表性
+
+**Imbalanced Datasets不平衡的数据集**
+
+**G-means**
+
+$${G-m e a n}=(A c c^{+}\times A c c^{-})^{1/2}$$
+
+$$w h e r e\ A c c^{+}={\frac{T P}{T P+F N}};\ \ \ A c c^{-}={\frac{T N}{T N+F P}}$$
+
+**F-measure**
+
+$$F-m e a s u r e={\frac{2\times P r e c i s i o n\times R e c a l l}{P r e c i s i o n+R e c a l l}}$$
+
+$$w h e r e\;\;\;P r e c i s i o n=\frac{T P}{T P+F P};\;\;\;\;{R e c a l l}=\frac{T P}{T P+F N}=A c c^{+}$$
+
+**Over-Sampling**
+
+可以参考[机器学习之类别不平衡问题 (3) —— 采样方法
+](https://www.cnblogs.com/massquantity/p/9382710.html),这里面的Border-line SMOTE个人认为比较符合ppt上的下一个要点**Boundary Sampling**
+
+**Normalization**
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Normalization.png?raw=true" width="100%">
+
+
 ## Data Description
 
 ## Feature Selection
