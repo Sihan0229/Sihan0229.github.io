@@ -14,6 +14,13 @@ excerpt: "Course notes of XJTU-ELEC427304 (TBC)."
         h3 { font: 16pt Times !important; }
 </style>
 
+| 评分项目 | 详细描述 | 权重 |
+| --- | --- | --- |
+| 闭卷考试 | 由每人出20分左右的题目组成 | 40-45% |
+| 课堂测试|选择题 | 5-10% |
+| 个人大作业 | 采用了什么模型<br>选择了哪些特征作为input，为什么<br>数据预处理<br>output是什么<br>对输出的分析<br>和别人的比较<br>未来展望改进方向<br>training的过程<br>test的过程<br>超参数是如何调整的 | 50% |
+
+
 # Introduction
 
 **PAC - probably Approximately Correct learning model**
@@ -376,15 +383,35 @@ Measure of Separability
 + SW may be singular.
 + LDA does not work well when...?
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/lda.png?raw=true" width="60%">
+
+(because the denominator of fisher critertion = 0)
+
+例题：PCA中包含**去均值**、**坐标变换**、**矩阵特征值分解**，不包含属性值标准化
+
+例题：样本个数小于数据维数时，LDA不能正常工作的原因是**类内散布矩阵不满秩**
+
+例题：当类中心重合时，LDA不能正常工作的原因是：Fisher准则函数恒等于0
+
+（
+类间散度矩阵
+$$
+S_{b}=\left(\mu_{0}-\mu_{1}\right)\left(\mu_{0}-\mu_{1}\right)^{\mathrm{T}}
+$$
+）
+
+# Naïve Bayes Classifier
 ## Conditional Independence   
 
 
 **Independent** ≠ **Uncorrelated**
 
-e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
+e.g. When $$X \in [-1, 1]$$, then $$Y = x^2$$.
 
-\\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
+$$Cov(X, Y) = 0$$
+indicating that$$X$$and $$Y$$ are **uncorrelated**, even though$$ Y$$is **completely determined** by $$X$$.
 
+# Decision Tree Model
 ## ID3 Framework
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3Framework.png?raw=true" width="100%">
@@ -407,7 +434,7 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 **Entropy Bias**
 
 信息增益率
-\\( \text{Cov}(X, Y) = 0 \\) indicating that \\( X \\) and \\( Y \\) are **uncorrelated**, even though \\( Y \\) is **completely determined** by \\( X \\).
+
 
 # Optimization
 
@@ -415,7 +442,7 @@ e.g. When \\( X \in [-1, 1] \\), then \\( Y = x^2 \\).
 
 ## Backpropagation 反向传播
 
-## FUlly connected layers
+## Fully connected layers
 
 参数量
 
