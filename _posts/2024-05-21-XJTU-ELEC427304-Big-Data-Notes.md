@@ -323,7 +323,7 @@ $$w h e r e\;\;\;P r e c i s i o n=\frac{T P}{T P+F P};\;\;\;\;{R e c a l l}=\fr
 ## Data Description
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description.png?raw=true" width="80%">
-e
+
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description2.png?raw=true" width="100%">
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description3.png?raw=true" width="100%">
@@ -355,6 +355,8 @@ $$
 + PCA会投影到保留信息最好的方向
 + LDA关注哪个方向可以更好地保持原始的分类信息（保留？类别信息）在尽可能保留类别区分信息的同时进行降维。
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pcdlda
+.png?raw=true" width="100%">
 
 ### 主成分分析PCA 数据规约
 
@@ -435,6 +437,10 @@ indicating that$$X$$and $$Y$$ are **uncorrelated**, even though$$ Y$$is **comple
 
 # Decision Tree Model
 ## ID3 Framework
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/tree.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Attribute Selection.png?raw=true" width="100%">
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3Framework.png?raw=true" width="100%">
 
