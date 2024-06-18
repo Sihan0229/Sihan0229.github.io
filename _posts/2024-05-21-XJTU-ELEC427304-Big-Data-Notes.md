@@ -170,7 +170,7 @@ C(i,j)：Cost of misclassifying class j example as class i
 
 **DM Techniques – Regression**
 
-# Data Preprocessing
+
 **Typical lssues** : 缺少属性值Missing Attribute Values, 不同的编码/命名方案Different Coding/Naming Schemes, 不可行的值Infeasible Values, 不一致的数据InconsistentData, 异常值Outliers
 
 **Data Quality** : Accuracy （准确性）, Completeness（完整性）, Consistency （一致性）, Interpretability（可解释性）, Credibility（可信性）, Timeliness（时效性）
@@ -202,7 +202,8 @@ Factors to consider:
 
 Always start with simple ones.
 
-OUTLINES of Data Preprocessing
+# Data Preprocessing
+
 ## Data Cleaning 数据清洗
 填充缺失值、更正不一致的数据、识别异常值和噪声数据。
 ### 缺失值
@@ -318,7 +319,7 @@ $$w h e r e\;\;\;P r e c i s i o n=\frac{T P}{T P+F P};\;\;\;\;{R e c a l l}=\fr
 e
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description2.png?raw=true" width="100%">
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description3.png?raw=true" width="100%">e
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description3.png?raw=true" width="100%">
 
 ## Feature Selection
 
@@ -326,11 +327,34 @@ e
 
 **Class Distributions** ：不平衡的class样本数量/分布
 
-Entropy 信息熵：
+**Entropy 熵**与**Information Gain 信息增益**
 
+信息熵$$\operatorname{Ent}(D)=-\sum_{k=1}^{|y|}p_{k}\log_{2}p_{k}$$
+
+信息熵值越小，D的纯度越高
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/gain.png?raw=true" width="100%">
+
+$${\mathrm{Gain}}(D,a)={\mathrm{Ent}}(D)-\sum_{v=1}^{V}{\frac{|D^{v}|}{|D|}}{\mathrm{Ent}}(D^{v})\ $$
+
+信息增益越大，说明使用属性a划分的纯度提升越大，在决策树中被选为划分属性
 
 ## Feature Extraction
 
++ PCA会投影到保留信息最好的方向
++ LDA关注哪个方向可以更好地保持原始的分类信息（保留？类别信息）在尽可能保留类别区分信息的同时进行降维。
+
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pcalda.png?raw=true" width="100%">
+
+### 主成分分析PCA 数据规约
+
+使所有样本的投影尽可能分开(如图中红线所示)，则需最大化投影点的方差
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pca.png?raw=true" width="100%">
+### 线性判别分析LDA 降维
+
+**Fisher Criterion**
 
 ## Conditional Independence   
 
