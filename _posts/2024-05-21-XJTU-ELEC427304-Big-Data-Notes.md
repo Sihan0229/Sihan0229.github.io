@@ -267,7 +267,8 @@ $$dist=(\sum_{k=1}^{n}|p_{k}-q_{k}|^r)^{1/r}$$
 
 $$mahalanobis(p,q)=\sqrt{(p-q)\Sigma^{-1}\left(p-q\right)^{r}}$$
 
-$$\Sigma_{j,k}=\frac{1}{n-1}\sum_{i=1}^{n}(X_{ij}-\overline{{{X}}}_{j})(X_{ik}-\overline{{{X}}}_{j})$$
+$$
+\Sigma_{j,k}=\frac{1}{n-1} \sum_{i=1}^{n}(X_{ij}-\overline{{X}}_{j})(X_{ik}-\overline{{X}}_{j})$$
 
 Duplicate Data重复数据处理方法
 
