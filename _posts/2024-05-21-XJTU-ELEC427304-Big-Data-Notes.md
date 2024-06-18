@@ -136,10 +136,7 @@ How to Construct an ROC curve
 **Cost Matrix**
 Cost-sensitive error rate and cost curve
 
-$$
-C(i|j)
-$$
-: Cost of misclassifying class j example as class i
+C(i|j)：Cost of misclassifying class j example as class i
 
 **Cost VS Accuracy**
 
@@ -155,6 +152,10 @@ $$
 
 答案：5
 
+例题：我们通常将数据集划分为训练集，验证集和测试集进行模型的训
+练，参数的验证需要在**验证集**上进行，参数确定后**需要**重新训练模型。
+
+
 **DM Techniques - Classification**: K-Means, Sequential Leader, Affinity Propagation
 
 **DM Techniques – Association Rule**
@@ -162,8 +163,12 @@ $$
 **DM Techniques – Regression**
 
 # Data Preprocessing
-
+**Typical lssues** : 缺少属性值Missing Attribute Values, 不同的编码/命名方案Different Coding/Naming Schemes, 不可行的值Infeasible Values, 不一致的数据InconsistentData, 异常值Outliers
 ## Conditional Independence   
+**Data Cleaning**
+Fill in missing values.
+Correct inconsistent data.
+ldentify outliers and noisy data.
 
 **Independent** ≠ **Uncorrelated**
 
@@ -303,3 +308,4 @@ $$x_{i}*x_{j}\longrightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
 ## Boosting
  **Adaboost**
+
