@@ -268,7 +268,8 @@ $$dist=(\sum_{k=1}^{n}|p_{k}-q_{k}|^r)^{1/r}$$
 $$mahalanobis(p,q)=\sqrt{(p-q)\Sigma^{-1}\left(p-q\right)^{r}}$$
 
 $$
-\Sigma_{j,k}=\frac{1}{n-1} \sum_{i=1}^{n}(X_{ij}-\overline{{X}}_{j})(X_{ik}-\overline{{X}}_{j})$$
+\Sigma_{j,k}=\frac{1}{n-1} \sum_{i=1}^{n}(X_{ij}-\overline{{X}}_{j})(X_{ik}-\overline{{X}}_{j})
+$$
 
 Duplicate Data重复数据处理方法
 
@@ -304,12 +305,18 @@ $$w h e r e\;\;\;P r e c i s i o n=\frac{T P}{T P+F P};\;\;\;\;{R e c a l l}=\fr
 可以参考[机器学习之类别不平衡问题 (3) —— 采样方法
 ](https://www.cnblogs.com/massquantity/p/9382710.html),这里面的Border-line SMOTE个人认为比较符合ppt上的下一个要点**Boundary Sampling**
 
+不平衡的数据集要采样、扩增、调整loss function
+
 **Normalization**
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Normalization.png?raw=true" width="100%">
 
 
 ## Data Description
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/discription.png?raw=true" width="80%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/discription2.png?raw=true" width="100%">
 
 ## Feature Selection
 
