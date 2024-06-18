@@ -314,11 +314,11 @@ $$w h e r e\;\;\;P r e c i s i o n=\frac{T P}{T P+F P};\;\;\;\;{R e c a l l}=\fr
 
 ## Data Description
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/discription.png?raw=true" width="80%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description.png?raw=true" width="80%">
+e
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description2.png?raw=true" width="100%">
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/discription2.png?raw=true" width="100%">
-
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/discription3.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description3.png?raw=true" width="100%">e
 
 ## Feature Selection
 
