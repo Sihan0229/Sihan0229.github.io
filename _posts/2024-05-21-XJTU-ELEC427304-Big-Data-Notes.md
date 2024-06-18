@@ -436,11 +436,24 @@ $$Cov(X, Y) = 0$$
 indicating that$$X$$and $$Y$$ are **uncorrelated**, even though$$ Y$$is **completely determined** by $$X$$.
 
 # Decision Tree Model
-## ID3 Framework
+## ID3
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/tree.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Dataset.png?raw=true" width="100%">
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Attribute Selection.png?raw=true" width="100%">
+
+
+**奥卡姆剃刀**：倾向于选择更简单的模型
+
+**过拟合over fitting**：泛化误差小，测试误差大（额外划出Validation Set来判定是否过拟合）
+
+定义为：给定一个假设空间 H，如果存在某个备择假设 h' ∈ H，比如 h 在训练样本上的误差比 h' 小，但是 h' 在整个实例分布上的误差比 h 小，则称假设 h ∈ H 与训练数据过度拟合。
+
+解决：早停，Loss加入正则项，利用新模型
+
+决策树中解决过拟合的方法：**剪枝**
+
+## ID3 Framework
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3Framework.png?raw=true" width="100%">
 
@@ -448,13 +461,7 @@ indicating that$$X$$and $$Y$$ are **uncorrelated**, even though$$ Y$$is **comple
 + 叶节点为空节点，如何决定该节点的分类？根据父节点的比例
 + 属性用完了也无法分类：树无法生长，根据占优比例决定类别。
 
-**奥卡姆剃刀**：倾向于选择更简单的模型
-
-**over fitting**：泛化误差小，测试误差大（额外划出Validation Set来判定是否过拟合）
-
-解决：早停，Loss加入正则项，利用新模型
-
-决策树解决过拟合的方法：**剪枝**
+**剪枝方法**
 
 + 预剪枝：生成决策树时，对每个节点在划分前先进行估计，若不能带来泛化性能的提升，则停止划分。（主要用到的标准是验证集的精度）
 + 后剪枝:生成完整的决策树，自底向上向叶节点进行考察，若该节点对应的子树替换成叶节点能带来泛化性能的提升，则替换成叶节点。
