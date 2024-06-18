@@ -375,7 +375,7 @@ $$J={\frac{\left|\mu_{1}-\mu_{2}\right|^{2}}{S_{1}^{2}+S_{2}^{2}}}={\frac{w^{T}{
 要让类间距离尽可能大，类内距离尽量小
 $$J=\frac {\Vert w^t\mu _0 -w^Tmu _1\Vert^2_2}{w^T \Sigma_0 w+w^T \Sigma_1w}$$
 类内散度矩阵
-$$\begin{array}{l}{{\mathrm{S}_{w}=\Sigma_{0}+\Sigma_{1}\quad,}}\\ {{\mathrm{~}=\sum_{\alpha\in X_{0}}\left(x-\mu_{0}\right)\left(x-\mu_{0}\right)^{\mathrm{T}}+\sum_{\alpha\in X_{1}}\left(x-\mu_{1}\right)\left(x-\mu_{1}\right)^{\mathrm{T}}}}\end{array}$$
+$$\mathrm{S_w} =\Sigma_0+\Sigma_1 =  \sum_{\alpha \in X_0} (x - \mu_0)(x - \mu_0)^T + \sum_{\alpha \in X_1} (x - \mu_1)(x - \mu_1)^T$$
 类间散度矩阵
 $$S_{b}=\left(\mu_{0}-\mu_{1}\right)\left(\mu_{0}-\mu_{1}\right)^{\mathrm{T}}$$
 
@@ -424,6 +424,7 @@ $$\omega_{M d P}=\arg\max_{\omega_i \in \omega} P{\big(}\omega_{i})\prod_{j}P{\b
 
 ## Conditional Independence   
 
+$$P(A,B\mid G)=P(A\mid G)P(B\mid G)\;\longleftrightarrow P(A\mid G,B)=P(A\mid G)$$
 
 **Independent** ≠ **Uncorrelated**
 
