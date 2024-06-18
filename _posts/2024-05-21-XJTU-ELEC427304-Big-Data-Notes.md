@@ -208,15 +208,44 @@ OUTLINES of Data Preprocessing
 ### 缺失值
 
 数据缺失类型分为三种：完全随机缺失、随机缺失、非随机缺失。
+参考[数据缺失类型](https://blog.csdn.net/jwtning/article/details/116125819)
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/missing.png?raw=true" width="100%">
 
 如何处理缺失数据？
 + 忽略：删除有缺失值的样本/属性，最简单、最直接的方法，低缺失率时效果很好
 + 手动填写缺失值：重新收集数据或领域知识，繁琐/不可行
 + 自动填写缺失值：全局常数/平均值或中位数/最可能的值
 
-**Outliers（离群点）**
+以下参考[劉智皓 (Chih-Hao Liu) 機器學習_學習筆記系列(96)：區域性異常因子(Local Outlier Factor)](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-96-%E5%8D%80%E5%9F%9F%E6%80%A7%E7%95%B0%E5%B8%B8%E5%9B%A0%E5%AD%90-local-outlier-factor-a141c2450d4a)
 
-**Anomaly（异常点） vs. Outlier（离群点）**
+**Outliers离群点** : Outliers≠Anomaly
+
+**Local Outliner Factor**
+关于LOF算法，它是基于空间密度来寻找异常值的，这里我们定义**可达距离reachability distance** = max(B点到离B第k近的点的距离, A和B的距离)
+
+$$
+reachability_{-}distance_{k}(A,B)=m a x\Big[k_{-}distance(B),distance(A,B)\Big]
+$$ 
+假设有两个点A和B，`k_distance(B)`代表的就是B点到离B第k近的点的距离，`distance(A,B)`则就是A和B的距离。所以这里的意思是：如果点和点之间相距够近，就将他们一视同仁，视为密度较高的区域。
+
+而接下來我們會計算**local reachability density: (平均距离)**
+
+$$
+IRD_{k}(A)=\frac{1}{\left( \frac{\sum_{B\in{\cal N}_{k}(A)}reachability_{-}distance_{k}(A,B)}{|{N}_{k}(A)|}\right)}
+$$
+
+其中N_k為A點的neighbor。所以這個式子代表的就是，我們A點neighbor其reachability distance**平均**的**倒數**，所以我們可以說，**如果IRD很大，代表以A點為中心的區域很密集**，反之則是很疏鬆。
+而當我們求得了IRD之後，我們最後就會計算
+
+**Local Outlier Factor**:
+
+$$L O F_{k}(A)=\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)/I R D_{k}(A)}{\left|N_{k}(A)\right|}=\frac{1}{I R D_{k}(A)}\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)}{\left|N_{k}(A)\right|}$$
+
+我們可以看到LOF，他做的事情就是計算A所有**neighbor的**IRD值並且將其平均除以IRD(A)。而LOF在意義上來說，**如果接近1代表，A和其Neighbor的空間密度都非常接近，如果小於1非常多，代表A的密度大於他的neighbor，也就是密度較高的區域，若大於1非常多，則代表A的密度小於他的neighbor。**
+
+
+
 
 ## Data Transformation 数据转换
 规范化Normalization、 聚合Aggregation、类型转换。
