@@ -336,13 +336,17 @@ e
 
 **Entropy 熵**与**Information Gain 信息增益**
 
-信息熵$$\operatorname{Ent}(D)=-\sum_{k=1}^{|y|}p_{k}\log_{2}p_{k}$$
+信息熵
+$$\operatorname{Ent}(D)=-\sum_{k=1}^{ \|y\|}p_{k}\log_{2}p_{k}
+$$
 
 信息熵值越小，D的纯度越高
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/gain.png?raw=true" width="100%">
 
-$${\mathrm{Gain}}(D,a)={\mathrm{Ent}}(D)-\sum_{v=1}^{V}{\frac{|D^{v}|}{|D|}}{\mathrm{Ent}}(D^{v})\ $$
+$$
+{\mathrm{Gain}}(D,a)={\mathrm{Ent}}(D)-\sum_{v=1}^{V}{\frac{|D^{v}|}{|D|}}{\mathrm{Ent}}(D^{v})
+$$
 
 信息增益越大，说明使用属性a划分的纯度提升越大，在决策树中被选为划分属性
 
@@ -351,8 +355,6 @@ $${\mathrm{Gain}}(D,a)={\mathrm{Ent}}(D)-\sum_{v=1}^{V}{\frac{|D^{v}|}{|D|}}{\ma
 + PCA会投影到保留信息最好的方向
 + LDA关注哪个方向可以更好地保持原始的分类信息（保留？类别信息）在尽可能保留类别区分信息的同时进行降维。
 
-
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pcalda.png?raw=true" width="100%">
 
 ### 主成分分析PCA 数据规约
 
