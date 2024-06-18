@@ -401,6 +401,25 @@ $$
 ）
 
 # Naïve Bayes Classifier
+
+$$
+P(A \mid B)=\frac{P(B\mid A) P(A)}{P(B)}
+$$
+
+**Naïve Bayes Classifier**
+
+$$\omega_{MAP}=\arg\max_{\omega_i \in \omega} P\bigl(\omega_{i}\mid a_{1},a_{2},...,a_{n}\bigr)$$
+
+$$\omega_{MAP}=\arg\max_{\omega_i \in \omega} \frac {P\bigl (a_{1},a_{2},...,a_{n}\mid\omega_{i}\bigr)P\bigl (\omega _{i} \bigr)}{P\bigl (a_{1},a_{2},...,a_{n}\bigr)}$$
+
+$$\omega_{MAP}=\arg\max_{\omega_i \in \omega} {P\bigl (a_{1},a_{2},...,a_{n}\mid\omega_{i}\bigr)P\bigl (\omega _{i} \bigr)}$$
+
+由于条件独立性
+
+$$\omega_{M d P}=\arg\max_{\omega_i \in \omega} P{\big(}\omega_{i})\prod_{j}P{\big(}a_{j}\mid\omega_{i}{\big)}$$
+
+
+
 ## Conditional Independence   
 
 
