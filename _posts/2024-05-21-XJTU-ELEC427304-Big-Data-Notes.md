@@ -136,7 +136,7 @@ How to Construct an ROC curve
 **Cost Matrix**
 Cost-sensitive error rate and cost curve
 
-C(i|j)：Cost of misclassifying class j example as class i
+C(i,j)：Cost of misclassifying class j example as class i
 
 **Cost VS Accuracy**
 
@@ -155,6 +155,14 @@ C(i|j)：Cost of misclassifying class j example as class i
 例题：我们通常将数据集划分为训练集，验证集和测试集进行模型的训
 练，参数的验证需要在**验证集**上进行，参数确定后**需要**重新训练模型。
 
+例题：当西瓜收购公司去瓜摊收购西瓜时既希望把好瓜都收走又保证收
+到的瓜中坏瓜尽可能的少，请问他应该考虑什么评价指标？
+
+正确：**F1调和平均**与**BEP**
+
+例题：假设我们已经建立好了一个二分类模型,输出是0或1,初始阈值设
+置为05 超过0.5概率估计就判别为1,否则就判别为0;如果我们现
+在用另一个大于0.5的阈值，一般来说，下列说法正确的是：**查准率会上升或不变，查全率会下降或不变**
 
 **DM Techniques - Classification**: K-Means, Sequential Leader, Affinity Propagation
 
@@ -164,6 +172,21 @@ C(i|j)：Cost of misclassifying class j example as class i
 
 # Data Preprocessing
 **Typical lssues** : 缺少属性值Missing Attribute Values, 不同的编码/命名方案Different Coding/Naming Schemes, 不可行的值Infeasible Values, 不一致的数据InconsistentData, 异常值Outliers
+
+**Data Quality** : Accuracy （准确性）, Completeness（完整性）, Consistency （一致性）, Interpretability（可解释性）, Credibility（可信性）, Timeliness（时效性）
+
+**数据清洗** : 填充缺失值、更正不一致的数据、识别异常值和噪声数据。
+
+**数据转换** : 规范化Normalization、 聚合Aggregation、类型转换。
+
+**数据集成** : 组合来自不同来源的数据。
+
+**数据缩减** : 特征选择、抽样
+
+## Privacy
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/privacy.png?raw=true" width="100%">
+
 ## Conditional Independence   
 **Data Cleaning**
 Fill in missing values.
