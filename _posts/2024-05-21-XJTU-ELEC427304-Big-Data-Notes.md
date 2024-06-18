@@ -349,12 +349,32 @@ $${\mathrm{Gain}}(D,a)={\mathrm{Ent}}(D)-\sum_{v=1}^{V}{\frac{|D^{v}|}{|D|}}{\ma
 
 ### 主成分分析PCA 数据规约
 
-使所有样本的投影尽可能分开(如图中红线所示)，则需最大化投影点的方差
+使所有样本的投影尽可能分开(如图中红线所示)，则需最大化投影点的方差，将原始数据投影到具有最大特征值的 S 的特征向量
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pca.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pca.png?raw=true" width="60%">
+
+
 ### 线性判别分析LDA 降维
 
+设法将样例投影到一条直线上，使得同类样例的投影点尽可能接近、异类样例的投影点尽可能远离
+
 **Fisher Criterion**
+
+$$J={\frac{\left|\mu_{1}-\mu_{2}\right|^{2}}{S_{1}^{2}+S_{2}^{2}}}={\frac{w^{T}{S}_{B}w}{w^{T}{S}_{w}w}}$$
+
+详细解释：
+要让类间距离尽可能大，类内距离尽量小
+$$J=\frac {\Vert w^t\mu _0 -w^Tmu _1\Vert^2_2}{w^T \Sigma_0 w+w^T \Sigma_1w}$$
+类内散度矩阵
+$$\begin{array}{l}{{\mathrm{S}_{w}=\Sigma_{0}+\Sigma_{1}\quad,}}\\ {{\mathrm{~}=\sum_{\alpha\in X_{0}}\left(x-\mu_{0}\right)\left(x-\mu_{0}\right)^{\mathrm{T}}+\sum_{\alpha\in X_{1}}\left(x-\mu_{1}\right)\left(x-\mu_{1}\right)^{\mathrm{T}}}}\end{array}$$
+类间散度矩阵
+$$S_{b}=\left(\mu_{0}-\mu_{1}\right)\left(\mu_{0}-\mu_{1}\right)^{\mathrm{T}}$$
+
+Measure of Separability
++ LDA produces at most C-1 projections
++ SB is a matrix with rank C-1 or less.
++ SW may be singular.
++ LDA does not work well when...?
 
 ## Conditional Independence   
 
