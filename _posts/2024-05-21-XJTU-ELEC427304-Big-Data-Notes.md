@@ -252,7 +252,7 @@ $$L O F_{k}(A)=\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)/I R D_{k}(A)}{\left|N_{k}(
 
 简单属性的相似性/不相似性
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/simidissimi.jng?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/simidissimi.png?raw=true" width="100%">
 
 **distance**
 	
