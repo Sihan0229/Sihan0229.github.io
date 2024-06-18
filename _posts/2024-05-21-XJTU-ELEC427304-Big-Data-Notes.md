@@ -268,7 +268,7 @@ $$dist=(\sum_{k=1}^{n}|p_{k}-q_{k}|^r)^{1/r}$$
 $$mahalanobis(p,q)=\sqrt{(p-q)\Sigma^{-1}\left(p-q\right)^{r}}$$
 
 $$
-\Sigma_{j,k}=\frac{1}{n-1} \sum_{i=1}^{n}(X_{ij}-\overline{{X}}_{j})(X_{ik}-\overline{{X}}_{j})
+\Sigma_{j,k}=\frac{1}{n-1} \sum_{i=1}^{n} (X_{ij}-\overline{X}_{j})(X_{ik}-\overline{X}_{j})
 $$
 
 Duplicate Data重复数据处理方法
@@ -321,6 +321,13 @@ e
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/description3.png?raw=true" width="100%">e
 
 ## Feature Selection
+
+属性和特征的选择
+
+**Class Distributions** ：不平衡的class样本数量/分布
+
+Entropy 信息熵：
+
 
 ## Feature Extraction
 
