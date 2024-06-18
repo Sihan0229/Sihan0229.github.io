@@ -318,6 +318,8 @@ $$w h e r e\;\;\;P r e c i s i o n=\frac{T P}{T P+F P};\;\;\;\;{R e c a l l}=\fr
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/discription2.png?raw=true" width="100%">
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/discription3.png?raw=true" width="100%">
+
 ## Feature Selection
 
 ## Feature Extraction
