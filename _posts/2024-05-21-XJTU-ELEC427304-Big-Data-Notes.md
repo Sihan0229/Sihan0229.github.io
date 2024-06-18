@@ -175,23 +175,60 @@ C(i,j)：Cost of misclassifying class j example as class i
 
 **Data Quality** : Accuracy （准确性）, Completeness（完整性）, Consistency （一致性）, Interpretability（可解释性）, Credibility（可信性）, Timeliness（时效性）
 
-**数据清洗** : 填充缺失值、更正不一致的数据、识别异常值和噪声数据。
-
-**数据转换** : 规范化Normalization、 聚合Aggregation、类型转换。
-
 **数据集成** : 组合来自不同来源的数据。
 
 **数据缩减** : 特征选择、抽样
 
-## Privacy
+**Privacy**
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/privacy.png?raw=true" width="100%">
 
+**No Free Lunch**
+
+Why bother so many different algorithms?
+
++ No algorithm is always superior to others.
++ No parameter settingis optimal over all problems.
+
+Look for the best match between problem and algorithm.
+
++ Experience
++ Trial and Error
+
+Factors to consider:
++ Applicability
++ Computational Complexity
++ Interpretability
+
+Always start with simple ones.
+
+OUTLINES of Data Preprocessing
+## Data Cleaning 数据清洗
+填充缺失值、更正不一致的数据、识别异常值和噪声数据。
+### 缺失值
+
+数据缺失类型分为三种：完全随机缺失、随机缺失、非随机缺失。
+
+如何处理缺失数据？
++ 忽略：删除有缺失值的样本/属性，最简单、最直接的方法，低缺失率时效果很好
++ 手动填写缺失值：重新收集数据或领域知识，繁琐/不可行
++ 自动填写缺失值：全局常数/平均值或中位数/最可能的值
+
+**Outliers（离群点）**
+
+**Anomaly（异常点） vs. Outlier（离群点）**
+
+## Data Transformation 数据转换
+规范化Normalization、 聚合Aggregation、类型转换。
+## Data Description
+
+## Feature Selection
+
+## Feature Extraction
+
+
 ## Conditional Independence   
-**Data Cleaning**
-Fill in missing values.
-Correct inconsistent data.
-ldentify outliers and noisy data.
+
 
 **Independent** ≠ **Uncorrelated**
 
