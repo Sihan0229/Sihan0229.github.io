@@ -584,9 +584,40 @@ $$
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/multi_tree.png?raw=true" width="100%">
 
-# Optimization
 
 # Convolutional Neural Networks
+
+##  Optimization
+
+$$w^{1}\leftarrow w^{0}-\eta\frac{\partial L}{\partial w}|_{w=w^{0},b=b^{0}}$$
+
+$$b^{1}\leftarrow b^{0}-\eta\frac{\partial L}{\partial b}|_{w=w^{0},b=b^{0}}$$
+
+**Small Batch v.s. Large Batch**
+
+Small Batch具有更好的性能
+
+## Step1: function with unknown
+**Sigmoid Function**
+
+$$y=c{\frac{1}{1+e^{-(b+w x_{1})}}}=c sigmoid (b+wx_1)$$
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_change.png?raw=true" width="100%">
+
+j为特征数量，i为sigmoid数量
+$$y=b+\sum_{i} c_{i} sigmoid \big( b_i + \sum_{j}w_{i j} x_{j}\Big)$$
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_net.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_mat.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_net2.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_a.png?raw=true" width="100%">
+
+## Step2: define loss from training data
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/loss_def.png?raw=true" width="100%">
 
 ## Backpropagation 反向传播
 
