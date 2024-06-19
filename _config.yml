@@ -5,7 +5,7 @@ url: https://Sihan0229.github.io
 avatar: /avatar.jpg
 paginate: 5
 permalink: 
-cover_image: /gsh_bg.jpeg
+#cover_image: /gsh_bg.jpeg
 
 # Gems
 plugins:

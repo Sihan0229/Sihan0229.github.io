@@ -621,6 +621,7 @@ $$y=b+\sum_{i} c_{i} sigmoid \big( b_i + \sum_{j}w_{i j} x_{j}\Big)$$
 
 ## Step 3: optimization
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/update.png?raw=true" width="100%">
 
 
 
