@@ -901,7 +901,7 @@ $$x_{i}*x_{j}\rightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
 自我测试
 + 使用大约三分之二的原始数据。
-+ 大约三分之一的原始数据被遗漏。
++ **大约三分之一的原始数据被遗漏**。
 + 包外 (OOB)
 + 类似于交叉验证
 
@@ -930,6 +930,8 @@ $$x_{i}*x_{j}\rightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
 充分利用所有样本
 
+例题：自助法（Bootstrap）是有放回采样
+
 ## 保证基础分类器多样性的方法
 + 算法多样性
 + 训练集（随机又放回采样）
@@ -942,6 +944,13 @@ $$x_{i}*x_{j}\rightarrow\varphi(x_{i})*\varphi(x_{j})$$
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/stack.png?raw=true" width="100%">
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/stacking.png?raw=true" width="100%">
+
+例题：Bagging的主要特点有:
++ 各基础分类器并行生成（正确）
++ 各基础分类器权重相同（认为正确）
++ 只需要较少的基础分类器
++ 基于Bootstrap采样生成训练集（正确）
+
 
 ## Boosting
 
@@ -971,6 +980,18 @@ $$
 Z = \sqrt{1-r^2}
 $$
 
+例题：在AdaBoost算法中，Z的作用是:
++ 确保在t+1代所有样本权重之和为1
++ 一个用于标准化的变量，可有可无（错误）
++ 可以用来描述算法的训练误差上界
++ 较小的Z值说明当前分类器的效果较好
+
+例题：AdaBoost中基础分类器的权重设置策略存在的问题有:
+计算复杂
+不能保证是最优解（正确）
+需要用户进行手工设置
+不能根据测试样本进行自适应调整（正确）
+
 **AdaBoost总结**
 
 优点
@@ -989,3 +1010,15 @@ $$
 ## RegionBoost
 
 不同的模型强调不同的区域,模型的权重应该依赖于输入,给定输入，仅调用适当的模型。
+
+问题：以下对RegionBoost算法描述正确的是:
++ 基础分类器权重根据当前输入样本计算得出
++ 每个基础分类器需要一个额外的可信度模型
++ 每个基础分类器的权重针对不同输入样本有所区别
++ 可信度模型用于估计基础分类器对特定输入的准确度
+
+问题：RegionBoost与AdaBoost相比:
++ 训练误差通常降低较慢
++ 训练误差能够趋近于0
++ 测试误差可能优于AdaBoost
++ 有较多的参数需要设置
