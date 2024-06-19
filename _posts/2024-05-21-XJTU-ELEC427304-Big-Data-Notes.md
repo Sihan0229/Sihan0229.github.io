@@ -625,7 +625,7 @@ $$y=b+\sum_{i} c_{i} sigmoid \big( b_i + \sum_{j}w_{i j} x_{j}\Big)$$
 
 例题：
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/batch_eg.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/batch_eg.png?raw=true" width="60%">
 
 Sigmoid to **ReLU** 激励函数变化，哪一种更好？
 
@@ -644,69 +644,41 @@ $$y=b+\sum_{2i}c_{i}\max\biggl({0},b_{i}+\sum_{j}w_{i j}x_{j}\biggr)$$
 + 计算复杂度较低(错误)
 + 导数存在解析解(正确)
 
+例题：以下关于感知机说法正确的是:
++ 多层感知机比感知机只多了一个隐含层
++ 感知机只能形成线性判决平面，无法解决异或问题（正确）
++ 多层感知机可以有多个隐含层，但是只能有一个输出单元
++ 隐含层神经元的个数应当小于输入层神经元的个数
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .feedback {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="question">
-        <p>以下关于感知机说法正确的是:</p>
-        <label><input type="checkbox" id="option1"> 多层感知机比感知机只多了一个隐含层</label><br>
-        <label><input type="checkbox" id="option2"> 感知机只能形成线性判决平面，无法解决异或问题</label><br>
-        <label><input type="checkbox" id="option3"> 多层感知机可以有多个隐含层，但是只能有一个输出单元</label><br>
-        <label><input type="checkbox" id="option4"> 隐含层神经元的个数应当小于输入层神经元的个数</label><br>
-    </div>
-    <button onclick="checkAnswers()">提交</button>
-    <div id="feedback" class="feedback"></div>
-
-    <script>
-        function checkAnswers() {
-            let correctAnswers = [2];
-            let feedback = document.getElementById('feedback');
-            let selectedAnswers = [];
-            for (let i = 1; i <= 4; i++) {
-                if (document.getElementById('option' + i).checked) {
-                    selectedAnswers.push(i);
-                }
-            }
-            if (arraysEqual(correctAnswers, selectedAnswers)) {
-                feedback.innerHTML = "正确！";
-                feedback.style.color = "green";
-            } else {
-                feedback.innerHTML = "错误。正确答案为：感知机只能形成线性判决平面，无法解决异或问题。";
-                feedback.style.color = "red";
-            }
-        }
-
-        function arraysEqual(a, b) {
-            if (a.length !== b.length) return false;
-            for (let i = 0; i < a.length; i++) {
-                if (a[i] !== b[i]) return false;
-            }
-            return true;
-        }
-    </script>
-</body>
-</html>
-
+多层感知机解决线性不可分问题的原理是:
++ 分而治之，对原始问题空间进行划分
++ 将原始问题向更高维空间映射
++ 在输出层和隐含层之间形成非线性的分界面
++ 将原始问题在隐含层映射成线性可分问题(正确)
 
 ## Backpropagation 反向传播
+
+### 前向传播
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/forward.png?raw=true" width="100%">
+
+### 后向传播
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/backward1.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/backward2.png?raw=true" width="100%">
+
+**Case 1. Output Layer**
+
+$$\frac{\partial C}{\partial z^{\prime}}=\frac{\partial y_{1}}{\partial z^{\prime}}\frac{\partial C}{\partial y_{1}}\;\;\;\;\;\frac{\partial C}{\partial z^{\prime\prime}}=\frac{\partial y_{2}}{\partial z^{\prime\prime}}\frac{\partial C}{\partial y_{2}}$$
+
+**Case 2. Not Output Layer**：递归计算
+
+前后向传播总结
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/forback.png?raw=true" width="100%">
+
+
 
 ## Fully connected layers
 
