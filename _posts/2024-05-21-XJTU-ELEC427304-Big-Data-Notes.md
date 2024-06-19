@@ -225,7 +225,7 @@ Always start with simple ones.
 + 手动填写缺失值：重新收集数据或领域知识，繁琐/不可行
 + 自动填写缺失值：全局常数/平均值或中位数/最可能的值
 
-例题：学生小明在调查问卷中没有回答下述问题:“你去年的工资收入和前年相比是否有所增加?”对这种情况最恰当的描述是:N/A
+例题：学生小明在调查问卷中没有回答下述问题:“你去年的工资收入和前年相比是否有所增加?”对这种情况最恰当的描述是: **N/A**而不是“数据未提供”
 
 以下参考[劉智皓 (Chih-Hao Liu) 機器學習_學習筆記系列(96)：區域性異常因子(Local Outlier Factor)](https://tomohiroliu22.medium.com/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%E7%B3%BB%E5%88%97-96-%E5%8D%80%E5%9F%9F%E6%80%A7%E7%95%B0%E5%B8%B8%E5%9B%A0%E5%AD%90-local-outlier-factor-a141c2450d4a)
 
@@ -253,6 +253,12 @@ $$
 $$L O F_{k}(A)=\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)/I R D_{k}(A)}{\left|N_{k}(A)\right|}=\frac{1}{I R D_{k}(A)}\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)}{\left|N_{k}(A)\right|}$$
 
 我們可以看到LOF，他做的事情就是計算A所有**neighbor的**IRD值並且將其平均除以IRD(A)。而LOF在意義上來說，**如果接近1代表，A和其Neighbor的空間密度都非常接近，如果小於1非常多，代表A的密度大於他的neighbor，也就是密度較高的區域，若大於1非常多，則代表A的密度小於他的neighbor。**
+
+例题：关于离群点的判定需要考虑**相对距离因素**，主要看其`与近邻的平均距离`与主要看其与`近邻的最大距离`均为错误
+
+**名义数据 (Nominal data)** 与 **序数数据 (Ordinal data)** 对比：
++ 名义数据：国家、颜色等等没有顺序
++ 序数数据：ABCD、非常不、稍不、中等、稍优、非常优
 
 **相似度与不相似度** 
 + 相似度: 两个数据对象相似程度的数值测量,对象越相似，相似度越高,通常在 [0,1] 范围内
@@ -293,6 +299,14 @@ Large Data : create keys -> sort -> merge
 有效抽样的关键原则如下：
 + 如果样本具有代表性，则使用样本的效果几乎与使用整个数据集一样好 
 + 如果样本具有与原始数据集大致相同的属性（感兴趣的），则该样本具有代表性
+
+习题：在大数据分析中，利用采样技术可以:
++ 降低获取数据的成本（错误）
++ 减少需要处理的数据量
++ 有助于处理不平衡数据
++ 提高数据的稳定性
+
+
 
 **Imbalanced Datasets不平衡的数据集**
 
@@ -364,6 +378,7 @@ $$
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pca.png?raw=true" width="60%">
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pca_label.png?raw=true" width="60%">
 
 ### 线性判别分析LDA 降维
 
@@ -383,8 +398,8 @@ $$S_{b}=\left(\mu_{0}-\mu_{1}\right)\left(\mu_{0}-\mu_{1}\right)^{\mathrm{T}}$$
 
 Measure of Separability
 + LDA produces at most C-1 projections
-+ SB is a matrix with rank C-1 or less.
-+ SW may be singular.
++ SB类间散度矩阵 is a matrix with rank C-1 or less.
++ SW类内散度矩阵 may be singular.
 + LDA does not work well when...?
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/lda.png?raw=true" width="60%">
@@ -434,6 +449,32 @@ e.g. When $$X \in [-1, 1]$$, then $$Y = x^2$$.
 
 $$Cov(X, Y) = 0$$
 indicating that$$X$$and $$Y$$ are **uncorrelated**, even though$$ Y$$is **completely determined** by $$X$$.
+
+**拉普拉斯平滑**
+
+参考[拉普拉斯平滑（Laplacian smoothing）](https://www.cnblogs.com/BlairGrowing/p/15803361.html)
+
+零概率问题：在计算事件的概率时，如果某个事件在训练集中没有出现过，会导致该事件的概率结果是0。这是不合理的，不能因为一个事件没有观察到，就被认为该事件一定不可能发生（即该事件的概率为0）
+
+原本极大似然估计公式为
+
+$$
+\varphi_{j}=\frac{\sum_{i=1}^{m}I\{z^{(i)}=j\}}{m}$$
+
+拉普拉斯平滑后(在分母上加上随机变量取值范围的大小k, 在分子加1)
+
+$$
+\varphi_{j}=\frac{\sum_{i=1}^{m}I\{z^{(i)}=j\}+1}{m+k}$$
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Laplacian smoothing.png?raw=true" width="100%">
+
+
+例题：以下关于拉普拉斯平滑说法正确的是:
+
++ 防止计算条件概率时分母为零
++ 防止计算条件概率时分子为零（正确）
++ 用于解决训练集中的噪声
++ 用于解决训练集中的异常值
 
 # Decision Tree Model
 ## ID3
@@ -531,13 +572,17 @@ $$
 
 **解决问题1：如何选择属性**
 
+**解决问题2： 如何划分样本集合**
+
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/lost1.png?raw=true" width="100%">
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/lost2.png?raw=true" width="100%">
 
-**解决问题2： 如何划分样本集合**
+### 多变量决策树
 
+实现这样的"斜划分"甚至更复杂划分的决策树，采用属性的组合
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/multi_tree.png?raw=true" width="100%">
 
 # Optimization
 
