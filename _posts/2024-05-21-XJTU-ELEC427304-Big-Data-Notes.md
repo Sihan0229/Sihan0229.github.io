@@ -159,6 +159,10 @@ C(i,j)：Cost of misclassifying class j example as class i
 
 答案：5
 
+$$
+Lift = \frac {P(A \mid B)}{P(A)}=\frac {\frac{25}{1000 \times 10\% }}{5\%}=\frac{25\%}{5\%}=5
+$$
+
 例题：我们通常将数据集划分为训练集，验证集和测试集进行模型的训
 练，参数的验证需要在**验证集**上进行，参数确定后**需要**重新训练模型。
 
@@ -678,7 +682,45 @@ $$\frac{\partial C}{\partial z^{\prime}}=\frac{\partial y_{1}}{\partial z^{\prim
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/forback.png?raw=true" width="100%">
 
+例题：在误差逆传播算法中，输出层神经元权重的调整机制和感知机的学习规则相比:
++ 考虑到线性不可分问题，学习规则更为复杂
++ 一模一样，等价于多个感知机
++ 遵循相同的原理，激励函数可能有所不同（正确）
++ 所有输出层神经元的权重需要同步调整
 
+例题：在权重更新公式中引入冲量的主要目的是:
++ 提高算法的收敛精度
++ 提高算法的稳健性
++ 提高算法的全局优化能力
++ 有助于摆脱误差平缓区域 （正确）
+
+例题：为了克服学习空间中存在的局部最优点应当:
++ 尝试从不同的初始点开始训练（正确）
++ 将权重初始化为接近于0的值
++ 采用较小的学习率
++ 增加隐含层神经元个数
+
+## Softmax
+
+Classification：one hot 编码
+
+$$y_{i}^{\prime}={\frac{e x p(y_{i})}{\sum_{j}e x p(y_{j})}}$$
+
+满足
+
+$$1>y_{i}^{\prime}>0$$
+
+$$\sum_{i} y_{i}^{\prime}=1$$
+
+Loss of Classification:最小化**交叉熵**等同于最大化似然。
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/classloss.png?raw=true" width="100%">
+
+MSE与交叉熵损失对比
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/mse_class.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/mse_class2.png?raw=true" width="100%">
 
 ## Fully connected layers
 
@@ -688,23 +730,85 @@ $$\frac{\partial C}{\partial z^{\prime}}=\frac{\partial y_{1}}{\partial z^{\prim
 
 ## Convolution arithmetic 卷积
 
++ 局部感知、参数共享、激励求和
++ 有些图案比整个图像小得多。
++ 相同的图案出现在不同的区域
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/story2.png?raw=true" width="100%">
+
 ## Pooling arithmetic 池化
+
+对像素进行Subsampling不会改变对象
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/wholecnn.png?raw=true" width="100%">
+
+CNN 对缩放和旋转不具有不变性（我们需要数据增强）
 
 # Classifier
 
 ## Linear Classifier
 
+$$
+{{f(x,w,b)=s i g n(g(x))}}=s i g n(w\cdot x+b)
+$$
+
+$$
+M={\frac{\left|g(x)\right|}{\left\|w\right\|}}={\frac{\left|w\cdot x+b\right|}{\left\|w\right\|}}
+$$
+
 ## SVM 支持向量机
 
+只有支持向量在起作用
+$$
+\alpha_{i}\ge0
+$$
+的点是支持向量
+
+正确分类样本：
 $$ y_i(w\cdot x_i+b)-1\ge 0 $$
 
-$$ a_i \ge 0 $$ 
+Margins宽度：
+$$
+M={\frac{2}{\lVert w\rVert}}
+$$
 
-$$ a_i[y_i(w\cdot x_i+b)-1]=0 $$
+而 
+$$\max M={\frac{\left|g(x)\right|}{\left\|w\right\|}} \rightarrow\min \frac{1}{2}w^Tw
+$$
 
-只有支持向量在起作用
+在以下约束下用拉格朗日乘子法
 
-### Soft Margin
+$$
+\begin{cases}
+  y_i(w \cdot x_i + b) - 1 \ge 0 \\
+  a_i \ge 0 \\
+  a_i [y_i (w \cdot x_i + b) - 1] = 0
+\end{cases}
+$$
+
+$$
+L_{D}\equiv\sum_{i}\alpha_{i}-{\frac{1}{2}\alpha ^T H \alpha} 
+$$
+
+where 
+
+$$
+H_{ij}=x_ix_jy_iy_j 
+$$
+
+$$s u b j e c t\;t o:\sum_{i}\alpha_{i}y_{i}=0\;\;\&\;\;\alpha_{i}\ge0
+$$
+
+$$
+w=\sum_{i=1}^{l}\alpha_{i}y_{i}x_{i}
+$$
+
+$$b={\frac{1}{N_{s}}}\sum_{s\in S}(y_{s}-\sum_{m\in S}\alpha_{m}y_{m}x_{m}\cdot x_{s})$$
+
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/svm_eg.png?raw=true" width="100%">
+
+### Soft Margin 软间隔
 
 $$
 y_{i}(w x_{i}+\partial)-1+\xi_{i}\geq0
@@ -714,9 +818,14 @@ $$\Phi(w)=\frac{1}{2}\,w^{t}w+C\sum_{i}\xi_{i}$$
 
 $$\xi_{r}\geq0$$
 
-$${\cal L}_{P} \equiv\frac{1}{2}\Bigl|w\Bigr|^{2}+C\sum_{i=1}^{l}\xi_{i}-\sum_{i=1}^{l}\alpha_{i}[y_{i}(w\cdot x_{i}+b)-1+\xi_{i}]-\sum_{i=1}^{l}\mu_{i}\xi_{i}$$
+$${\cal L}_{P} \equiv\frac{1}{2}\Bigl|w\Bigr|^{2}+C\sum_{i=1}^{l}\xi_{i}-\sum_{i=1}^{l}\alpha_{i}[y_{i}(w\cdot x_{i}+b)-1+\xi_{i}]-\sum_{i=1}^{l}\mu_{i}\xi_{i}
+$$
+
+$$L_{\scriptscriptstyle D}\equiv\sum_{i}\alpha_{i}-\frac{1}{2}\alpha^{T}H\alpha\quad s.t.0\le\alpha_{i}\le C\quad a n d\ \sum_{i}\alpha_{i}y_{i}=0
+$$
 
 ### 非线性SVMs （Non-linear SVMs）
+
 
 **Feature Space**：
 向高阶空间进行映射，可以把很多不能用linear SVM解决的问题使用linear SVM解决
@@ -725,16 +834,19 @@ $${\cal L}_{P} \equiv\frac{1}{2}\Bigl|w\Bigr|^{2}+C\sum_{i=1}^{l}\xi_{i}-\sum_{i
 
 Which kind of $$\varphi(x)$$ can solve this problem?
 
-**Kernel Trick** 
+## Kernel Trick 核方法
 
 $$K(x_{i}x_{j})=\varphi(x_{i})*\varphi(x_{j})$$
 
-$$\mathcal{\Phi}\colon\,x\longrightarrow\mathcal{\varphi}(x)$$
+每个数据点都通过某种变换
+$$\mathcal{\Phi}\colon\,x\rightarrow\mathcal{\varphi}(x)$$
+映射到高维空间
 
-$$x_{i}*x_{j}\longrightarrow\varphi(x_{i})*\varphi(x_{j})$$
+$$x_{i}*x_{j}\rightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
-**Solutions of w & b**
+常见核函数
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/kernel.png?raw=true" width="100%">
 
 问题：在SVM当中进行空间映射的主要目的是:
 - A 降低计算复杂度 （提高）
@@ -754,6 +866,11 @@ $$x_{i}*x_{j}\longrightarrow\varphi(x_{i})*\varphi(x_{j})$$
 - C 核函数的导数具有简单的解析解，简化了运算
 - D 核函数具有固定的上下界，可以输出$$(-1,+1)$$区间中的连续值
 
+问题：通过运用核函数，我们可以:
+- 提高算法的可解释性
+- 生成数量较少的支持向量
+- 生成数量较多的支持向量
+- 避免高维空间运算，降低算法复杂度（正确）
 
 
 # 集成学习 
