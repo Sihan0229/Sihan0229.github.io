@@ -875,13 +875,59 @@ $$x_{i}*x_{j}\rightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
 # 集成学习 
 
+组合模型的不同方法：
++ 平均法
++ 多数投票法
++ 加权多数投票法
+
 ## bagging
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/bootstrap.png?raw=true" width="100%">
 
+## Random Forests 随机森林
+**主要特征**
+
+生成截然不同的树
++ 使用训练数据的随机引导样本。
++ 对每个节点使用随机变量子集。
+
+变量数量
++ 平方根 (K)
++ K：可用变量总数
++ 可以显著加快树构建过程。
+
+树数量
++ 500 棵或更多
+
+自我测试
++ 使用大约三分之二的原始数据。
++ 大约三分之一的原始数据被遗漏。
++ 包外 (OOB)
++ 类似于交叉验证
+
+**RF 优势**
+所有数据均可用于训练过程。
++ 无需留下一些数据用于测试。
++ 无需进行常规交叉验证。
++ OOB 中的数据用于评估当前树。
+
+整个 RF 的性能
++ 每个数据点都在树的子集上进行测试。
++ 取决于它是否在 OOB 中。
+
+高水平的预测准确性
++ 仅需尝试几个参数。
++ 适用于分类和回归。
+
+抗过度训练（过度拟合）。
+
+无需事先进行特征选择。
+
 ## 有放回采样
-有多少样本没有被勇敢但是被以为是可以test的 OOB
+有多少样本没有被用到但是被以为是可以test的 OOB
+
 好处：可以帮我们构建具有分散性的基础分类器
+
 充分利用所有样本
 
 ## 保证基础分类器多样性的方法
@@ -898,5 +944,48 @@ $$x_{i}*x_{j}\rightarrow\varphi(x_{i})*\varphi(x_{j})$$
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/stacking.png?raw=true" width="100%">
 
 ## Boosting
- **Adaboost**
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Boosting.png?raw=true" width="100%">
+
++ Bagging 旨在减少方差，而不是偏差。
++ 在 Boosting 中，分类器是按顺序生成的
++ 关注最具信息量的数据点。训练样本是加权的,通过加权投票合并输出。
++ 可以创建任意强的分类器。基础学习者可以任意弱, 只要它们比随机猜测更好！
+
+## Adaboost
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/AdaBoost.png?raw=true" width="100%">
+
+$$
+a=\frac{1}{2} \ln(\frac {1-\varepsilon}{\varepsilon})
+$$
+
+误差界的计算
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Error Bounds.png?raw=true" width="100%">
+
+$$r=\sum_{i}D_{i}y_{i}h(x_{i}) \rightarrow \varepsilon = \frac{1-r}{2} \rightarrow a=\frac{1}{2} \ln(\frac {1+r}{1-r})
+$$
+
+$$
+Z = \sqrt{1-r^2}
+$$
+
+**AdaBoost总结**
+
+优点
++ 简单易行
++ 几乎没有需要调整的参数
++ 训练集上有证明的上限+
++ 不易过拟合
+ 
+缺点
++ 次优的 𝛼 值
++ 最速下降
++ 对噪音敏感
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/dy_w.png?raw=true" width="100%">
+
+## RegionBoost
+
+不同的模型强调不同的区域,模型的权重应该依赖于输入,给定输入，仅调用适当的模型。
