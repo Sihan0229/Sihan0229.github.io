@@ -517,13 +517,17 @@ $$
 
 熵、Gini与分类error的比较
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/compare.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/compare.png?raw=true" width="70%">
 
 ### 连续值处理:设置threshold
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/continous_id3.png?raw=true" width="100%">
 
 ### 缺失值处理
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/na.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/na2.png?raw=true" width="100%">
 
 # Optimization
 
