@@ -623,8 +623,87 @@ $$y=b+\sum_{i} c_{i} sigmoid \big( b_i + \sum_{j}w_{i j} x_{j}\Big)$$
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/update.png?raw=true" width="100%">
 
+例题：
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/batch_eg.png?raw=true" width="100%">
 
+Sigmoid to **ReLU** 激励函数变化，哪一种更好？
+
+$$y=b+\sum_{2i}c_{i}\max\biggl({0},b_{i}+\sum_{j}w_{i j}x_{j}\biggr)$$
+
+例题：以下关于感知机说法正确的是:
++ 在batchlearning模式下，权重调整出现在学习每个样本之后
++ 只要参数设置得当，感知机理论上可以解决各种分类
+问题
++ 感知机的训练过程可以看成是在误差空间进行梯度下降(正确)
++ 感知机的激励函数必须采用门限函数
+
+例题：采用sigmod函数作为激励函数的主要原因是:
++ 有固定的输出上下界(正确)
++ 处处可导(正确)
++ 计算复杂度较低(错误)
++ 导数存在解析解(正确)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        <p>以下关于感知机说法正确的是:</p>
+        <label><input type="checkbox" id="option1"> 多层感知机比感知机只多了一个隐含层</label><br>
+        <label><input type="checkbox" id="option2"> 感知机只能形成线性判决平面，无法解决异或问题</label><br>
+        <label><input type="checkbox" id="option3"> 多层感知机可以有多个隐含层，但是只能有一个输出单元</label><br>
+        <label><input type="checkbox" id="option4"> 隐含层神经元的个数应当小于输入层神经元的个数</label><br>
+    </div>
+    <button onclick="checkAnswers()">提交</button>
+    <div id="feedback" class="feedback"></div>
+
+    <script>
+        function checkAnswers() {
+            let correctAnswers = [2];
+            let feedback = document.getElementById('feedback');
+            let selectedAnswers = [];
+            for (let i = 1; i <= 4; i++) {
+                if (document.getElementById('option' + i).checked) {
+                    selectedAnswers.push(i);
+                }
+            }
+            if (arraysEqual(correctAnswers, selectedAnswers)) {
+                feedback.innerHTML = "正确！";
+                feedback.style.color = "green";
+            } else {
+                feedback.innerHTML = "错误。正确答案为：感知机只能形成线性判决平面，无法解决异或问题。";
+                feedback.style.color = "red";
+            }
+        }
+
+        function arraysEqual(a, b) {
+            if (a.length !== b.length) return false;
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] !== b[i]) return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
 
 
 ## Backpropagation 反向传播
