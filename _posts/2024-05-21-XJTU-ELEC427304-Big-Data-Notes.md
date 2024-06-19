@@ -529,6 +529,16 @@ $$
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/na2.png?raw=true" width="100%">
 
+**解决问题1：如何选择属性**
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/lost1.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/lost2.png?raw=true" width="100%">
+
+**解决问题2： 如何划分样本集合**
+
+
+
 # Optimization
 
 # Convolutional Neural Networks
