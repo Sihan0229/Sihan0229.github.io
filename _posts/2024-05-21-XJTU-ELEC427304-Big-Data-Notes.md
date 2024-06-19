@@ -2,7 +2,7 @@
 layout: post  
 title: "XJTU-ELEC427304 Big Data Notes"  
 date: 2024-06-04 19:10 +0800  
-last_modified_at: 2024-06-09 19:18 +0800  
+last_modified_at: 2024-06-19 19:18 +0800  
 tags: [Course Note]  
 math: true  r
 toc: true 
