@@ -455,21 +455,75 @@ indicating that$$X$$and $$Y$$ are **uncorrelated**, even though$$ Y$$is **comple
 
 ## ID3 Framework
 
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3 Framework.png?raw=true" width="100%">
+
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ID3Framework.png?raw=true" width="100%">
 
 + 叶节点为纯节点，stop.
 + 叶节点为空节点，如何决定该节点的分类？根据父节点的比例
 + 属性用完了也无法分类：树无法生长，根据占优比例决定类别。
 
-**剪枝方法**
+### 剪枝方法
 
-+ 预剪枝：生成决策树时，对每个节点在划分前先进行估计，若不能带来泛化性能的提升，则停止划分。（主要用到的标准是验证集的精度）
-+ 后剪枝:生成完整的决策树，自底向上向叶节点进行考察，若该节点对应的子树替换成叶节点能带来泛化性能的提升，则替换成叶节点。
+如何判断剪枝泛化后性能是否提升？ 留出法
+
++ 预剪枝：生成决策树时，对每个节点在划分前先进行估计，若不能带来泛化性能的提升，则停止划分。（主要用到的标准是**验证集/测试集**的精度提升情况）
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/precut.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/precut2.png?raw=true" width="100%">
+
+|保留分支数 | 训练时间 | 泛化性能 | 欠拟合风险 |
+| --- | --- | --- | --- |
+|少| 小 |强| 大|
+很多分支未展开|||学到的特点不足以对样本进行正确分类|
+
++ 后剪枝:生成完整的决策树（也就是说，分类决策是由**训练集**给出的），自底向上向叶节点进行考察，若该节点对应的子树替换成叶节点（叶节点正负取值仍然由**训练集**样本占比决定）能带来泛化性能（在**验证集**上分类的准确性）的提升，则替换成叶节点。
 
 **Entropy Bias**
+熵作为决策标准会偏向于具有更多类值的属性，例如• 考虑属性“出生日期”，将训练数据分成非常小的子集，信息增益非常高，对看不见的实例的目标函数预测非常差，这样的属性需要penalized！
 
-信息增益率
+### 信息增益率
 
+$$Split Information(S,A)=-\sum_{i=1}^{C}{\frac{\mid S_{i}\mid}{\mid S\mid}}log_{2}\,{\frac{\mid S_{i}\mid}{\mid S\mid}}$$
+
+$$G a i n R a t i o(S,A)=\frac{G a i n(S,A)}{Split Information(S,A)}$$
+
+### 基尼指数 Gini index
+
+当前样本集合 D 中第 k 类样本所占的比例为 Pk ,数据集 D 的纯度可用基尼值来度量
+
+$$Gini(D)=1-\sum_{k=1}^{|y|}p_{k}^{2}$$
+
+Gini(D) 反映了从数据集 D 中随机抽取两个样本，其类别标记不一致的概率.Gini(D)越小，说明纯度越高。
+属性 α 的基尼指数定义为(D指的是划分处的数据集)
+
+$${\mathrm{Gini\_ index}}(D,a)=\sum_{v=1}^{V}{\frac{|D^{v}|}{|D|}}{\mathrm{Gini}}(D^{v})$$
+
+基尼指数最小的是最优划分属性
+
+$$a_{*}=\arg\min_{a\in A}{\mathrm{Gini\_ index}}(D,a)$$
+
+### 分类错误
+
+$$
+\text{Error} = 1 - \max(P(C1), P(C2), \ldots, P(Cn))
+$$
+
++ 最大值：当记录在所有类中均匀分布时，错误最大。这意味着节点包含的信息最少。
++ 最小值：当所有记录都属于同一类时，错误最小。这意味着节点包含的信息最多。
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/classification_error.png?raw=true" width="100%">
+
+熵、Gini与分类error的比较
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/compare.png?raw=true" width="100%">
+
+### 连续值处理:设置threshold
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/continous_id3.png?raw=true" width="100%">
+
+### 缺失值处理
 
 # Optimization
 
