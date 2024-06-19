@@ -587,7 +587,7 @@ $$
 
 # Convolutional Neural Networks
 
-##  Optimization
+**Optimization**
 
 $$w^{1}\leftarrow w^{0}-\eta\frac{\partial L}{\partial w}|_{w=w^{0},b=b^{0}}$$
 
@@ -609,7 +609,7 @@ $$y=b+\sum_{i} c_{i} sigmoid \big( b_i + \sum_{j}w_{i j} x_{j}\Big)$$
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_net.png?raw=true" width="100%">
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_mat.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_mat.png?raw=true" width="60%">
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sigmoid_net2.png?raw=true" width="100%">
 
@@ -618,6 +618,13 @@ $$y=b+\sum_{i} c_{i} sigmoid \big( b_i + \sum_{j}w_{i j} x_{j}\Big)$$
 ## Step2: define loss from training data
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/loss_def.png?raw=true" width="100%">
+
+## Step 3: optimization
+
+
+
+
+
 
 ## Backpropagation 反向传播
 

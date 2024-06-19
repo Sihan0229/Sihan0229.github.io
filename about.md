@@ -3,6 +3,18 @@ layout: page
 title: About
 ---
 
-**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
+# Sihan Gao 高思涵
 
-For more information about Not Pure Poole, please browse the [README](https://github.com/vszhub/not-pure-poole) file.
+No. 28, West Xianning Road, Xi'an, China
+
+**Email:**  
+2193224579@stu.xjtu.edu.cn, sihangao2004@gmail.com
+
+
+## Biography
+
+I am a third-year undergraduate student at Xi'an Jiaotong University, majoring in Automation and minoring in Electronics Engineering.
+
+My research area is Medical Image Analysis, Computer Vision and etc.
+
+
