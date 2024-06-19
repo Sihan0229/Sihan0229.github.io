@@ -644,7 +644,7 @@ $$y=b+\sum_{2i}c_{i}\max\biggl({0},b_{i}+\sum_{j}w_{i j}x_{j}\biggr)$$
 + 计算复杂度较低(错误)
 + 导数存在解析解(正确)
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
