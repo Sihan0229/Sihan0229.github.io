@@ -1019,7 +1019,11 @@ $$
 + 可信度模型用于估计基础分类器对特定输入的准确度
 
 问题：RegionBoost与AdaBoost相比:
-+ 训练误差通常降低较慢
-+ 训练误差能够趋近于0
-+ 测试误差可能优于AdaBoost
-+ 有较多的参数需要设置
++ 训练误差通常降低较慢（错误，初期下降较快）
++ 训练误差能够趋近于0（错误，无法达到0）
++ 测试误差可能优于AdaBoost（正确）
++ 有较多的参数需要设置（正确）
+
+主要对比下面两张图，左侧为训练误差，右边为测试误差
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ada_region.png?raw=true" width="100%">
