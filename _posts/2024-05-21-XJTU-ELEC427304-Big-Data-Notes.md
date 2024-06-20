@@ -373,8 +373,7 @@ $$
 + PCA会投影到保留信息最好的方向
 + LDA关注哪个方向可以更好地保持原始的分类信息（保留？类别信息）在尽可能保留类别区分信息的同时进行降维。
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pcdlda
-.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/pcdlda.png?raw=true" width="100%">
 
 ### 主成分分析PCA 数据规约
 
@@ -718,9 +717,9 @@ Loss of Classification:最小化**交叉熵**等同于最大化似然。
 
 MSE与交叉熵损失对比
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/mse_class.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/mse_cross.png?raw=true" width="100%">
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/mse_class2.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/mse_cross2.png?raw=true" width="100%">
 
 ## Fully connected layers
 
@@ -823,6 +822,8 @@ $$
 
 $$L_{\scriptscriptstyle D}\equiv\sum_{i}\alpha_{i}-\frac{1}{2}\alpha^{T}H\alpha\quad s.t.0\le\alpha_{i}\le C\quad a n d\ \sum_{i}\alpha_{i}y_{i}=0
 $$
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/soft.png?raw=true" width="100%">
 
 ### 非线性SVMs （Non-linear SVMs）
 
