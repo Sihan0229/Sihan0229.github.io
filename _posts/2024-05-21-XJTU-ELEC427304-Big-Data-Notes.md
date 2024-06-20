@@ -966,6 +966,14 @@ $$x_{i}*x_{j}\rightarrow\varphi(x_{i})*\varphi(x_{j})$$
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/AdaBoost.png?raw=true" width="100%">
 
+alpha的选择
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Choice1.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Choice2.png?raw=true" width="100%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/Choice3.png?raw=true" width="100%">
+
 $$
 a=\frac{1}{2} \ln(\frac {1-\varepsilon}{\varepsilon})
 $$
