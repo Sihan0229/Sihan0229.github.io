@@ -275,7 +275,7 @@ $$L O F_{k}(A)=\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)/I R D_{k}(A)}{\left|N_{k}(
 **distance**
 	
 + Euclidean Distance
-$$dist={\sqrt{\frac{n}{k-1}}}(p_{k}-q_{k})^{2}$$
+$$dist={\sum^{n}_{k-1}}(p_{k}-q_{k})^{2}$$
 + Minkowski Distance
 $$dist=(\sum_{k=1}^{n}|p_{k}-q_{k}|^r)^{1/r}$$
 
