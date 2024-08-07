@@ -256,6 +256,8 @@ $$
 
 $$L O F_{k}(A)=\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)/I R D_{k}(A)}{\left|N_{k}(A)\right|}=\frac{1}{I R D_{k}(A)}\frac{\sum_{B\in N_{k}(A)}I R D_{k}(B)}{\left|N_{k}(A)\right|}$$
 
+
+
 我們可以看到LOF，他做的事情就是計算A所有**neighbor的**IRD值並且將其平均除以IRD(A)。而LOF在意義上來說，**如果接近1代表，A和其Neighbor的空間密度都非常接近，如果小於1非常多，代表A的密度大於他的neighbor，也就是密度較高的區域，若大於1非常多，則代表A的密度小於他的neighbor。**
 
 例题：关于离群点的判定需要考虑**相对距离因素**，主要看其`与近邻的平均距离`与主要看其与`近邻的最大距离`均为错误
@@ -356,6 +358,9 @@ $$w h e r e\;\;\;P r e c i s i o n=\frac{T P}{T P+F P};\;\;\;\;{R e c a l l}=\fr
 
 信息熵
 $$\operatorname{Ent}(D)=-\sum_{k=1}^{ \|y\|}p_{k}\log_{2}p_{k}
+$$
+
+$$\operatorname{Ent}(D)=-\Sigma_{k=1}^{ \|y\|}p_{k}\log_{2}p_{k}
 $$
 
 信息熵值越小，D的纯度越高
@@ -1035,3 +1040,5 @@ $$
 主要对比下面两张图，左侧为训练误差，右边为测试误差
 
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/ada_region.png?raw=true" width="100%">
+
+
