@@ -18,5 +18,3 @@ excerpt: "各种很好用的配置方法"
 
 # git使用
 [生成新的 SSH 密钥并将其添加到 ssh-agent](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-
-# Autodl使用
