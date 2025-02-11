@@ -42,11 +42,8 @@ conda package -n dhcp -o dhcp_env.tar.bz2
 
 ## 2. 传输到无法联网的服务器上
 
-找到anaconda/envs路径，例如`/share/home/shgao/anaconda3/envs/`。如果不知道路径可以进行查找
+找到anaconda/envs路径，例如`/share/home/shgao/.conda/`。如果不知道路径可以进行查找
 
-```bash
-conda info --envs
-```
 
 进入该路径，新建目录用于解压环境
 
@@ -72,4 +69,17 @@ tar -xjf dhcp_env.tar.bz2 -C dhcp_env
 
 ```bash
 conda activate dhcp_env
+```
+
+## 4. 验证环境是否可用
+
+```bash
+conda info --envs
+```
+显示如下内容即为完成
+```bash
+# conda environments:
+#
+base                     /n04dat/shgao/software/anaconda3
+dhcp_env              *  /n04dat/shgao/software/anaconda3/envs/dhcp_env
 ```
