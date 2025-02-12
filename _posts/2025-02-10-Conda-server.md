@@ -9,7 +9,7 @@ toc: true
 excerpt: "实验室的服务器无法联网，但是需要配置虚拟环境，在另一个可以联网的linux设备上配置好虚拟环境再传输到服务器上"
 ---
 操作流程：
-## 1. 在另一个可以联网的linux设备上配置好虚拟环境
+# 1. 在另一个可以联网的linux设备上配置好虚拟环境
 在`base`环境下操作，假设已经配置好的环境为`dhcp`
 
 （如果没有激活base环境，参考[Conda activate激活base环境出错解决方法](https://sihan0229.github.io/2025/02/03/Conda-activate.html)）
@@ -40,7 +40,7 @@ conda package -n dhcp -o dhcp_env.tar.gz
 conda package -n dhcp -o dhcp_env.tar.bz2
 ```
 
-## 2. 传输到无法联网的服务器上
+# 2. 传输到无法联网的服务器上
 
 找到anaconda/envs路径，例如`/share/home/shgao/.conda/`。如果不知道路径可以进行查找
 
@@ -65,13 +65,13 @@ tar -xjf dhcp_env.tar.bz2 -C dhcp_env
 
 若成功，无输出
 
-## 3. 激活环境
+# 3. 激活环境
 
 ```bash
 conda activate dhcp_env
 ```
 
-## 4. 验证环境是否可用
+# 4. 验证环境是否可用
 
 ```bash
 conda info --envs
