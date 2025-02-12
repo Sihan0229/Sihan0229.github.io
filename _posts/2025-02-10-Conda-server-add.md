@@ -59,7 +59,7 @@ proxy_servers:
 conda config --show | grep proxy
 ```
 如果输出如下，说明代理已成功删除
-```bash
+```pgsql
 proxy_servers: {}
 ```
 
@@ -78,7 +78,7 @@ Current channels:
 ```
 
 移除方法为，检查所有channel名称
-```pgsql
+```bash
 conda config --show channels
 ```
 将会输出类似
@@ -94,13 +94,13 @@ channels:
 ```
 
 依次删除上面给出的所有channel
-```pgsql
+```bash
 conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 ```
 
 再次检查现有channels
-```pgsql
+```bash
 conda config --show channels
 ```
 若输出
