@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: "Autodl服务器更换镜像后无法连接VScode"  
+title: "【教程】Autodl服务器更换镜像后无法连接VScode"  
 date: 2024-05-28 00:10 +0800  
 last_modified_at: 2024-05-28 00:10 +0800  
 tags: [configuration]  

@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: "Visdom Server在Autodl服务器上的配置（填坑）"  
+title: "【教程】Visdom Server在Autodl服务器上的配置（填坑）"  
 date: 2024-05-22 00:10 +0800  
 last_modified_at: 2024-05-22 00:10 +0800  
 tags: [configuration]  

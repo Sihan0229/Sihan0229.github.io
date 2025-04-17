@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: "在无法联网的服务器上配置Anaconda虚拟环境"  
+title: "【教程】在无法联网的服务器上配置Anaconda虚拟环境"  
 date: 2025-02-10 00:10 +0800  
 last_modified_at: 2025-02-11 00:10 +0800  
 tags: [configuration]  
@@ -9,8 +9,10 @@ toc: true
 excerpt: "实验室的服务器无法联网，但是需要配置虚拟环境，在另一个可以联网的linux设备上配置好虚拟环境再传输到服务器上"
 ---
 操作流程：
+
 # 1. 在另一个可以联网的linux设备上配置好虚拟环境
-在`base`环境下操作，假设已经配置好的环境为`dhcp`
+
+在 `base`环境下操作，假设已经配置好的环境为 `dhcp`
 
 （如果没有激活base环境，参考[Conda activate激活base环境出错解决方法](https://sihan0229.github.io/2025/02/03/Conda-activate.html)）
 
@@ -42,8 +44,7 @@ conda package -n dhcp -o dhcp_env.tar.bz2
 
 # 2. 传输到无法联网的服务器上
 
-找到anaconda/envs路径，例如`/share/home/shgao/.conda/`。如果不知道路径可以进行查找
-
+找到anaconda/envs路径，例如 `/share/home/shgao/.conda/`。如果不知道路径可以进行查找
 
 进入该路径，新建目录用于解压环境
 
@@ -51,13 +52,13 @@ conda package -n dhcp -o dhcp_env.tar.bz2
 mkdir -p dhcp_env
 ```
 
-如果是`.tar.gz`文件，使用解压命令
+如果是 `.tar.gz`文件，使用解压命令
 
 ```bash
 tar -xzf dhcp_env.tar.gz -C dhcp_env
 ```
 
-如果是`.tar.bz2`文件，则使用解压命令
+如果是 `.tar.bz2`文件，则使用解压命令
 
 ```bash
 tar -xjf dhcp_env.tar.bz2 -C dhcp_env
@@ -76,7 +77,9 @@ conda activate dhcp_env
 ```bash
 conda info --envs
 ```
+
 显示如下内容即为完成
+
 ```bash
 # conda environments:
 #
