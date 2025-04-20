@@ -10,7 +10,7 @@ excerpt: "Autodl服务器系统盘爆满，只配过三个项目的环境，针�
 ---
 正好有一个实例快满了也没什么用，就试一下清理系统盘的方法，方便以后需要的时候用。目前系统盘已经96.11%快满了，但是数据盘才用了16.79%。这个服务器主要是一个项目**配环境**比较麻烦，没配完就满了，所以主要是针对这个问题来删系统盘。
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/autodl9611.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/autodl961.png?raw=true" width="100%">
 
 只开了无卡模式来删文件，尽管已经96%+了还是能连上服务器的。
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/autodl97.png?raw=true" width="60%">
