@@ -13,7 +13,7 @@ excerpt: "Autodl服务器系统盘爆满，只配过三个项目的环境，针�
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/autodl9611.png?raw=true" width="100%">
 
 只开了无卡模式来删文件，尽管已经96%+了还是能连上服务器的。
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/autodl97.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/autodl97.png?raw=true" width="60%">
 
 首先删两个不影响系统运行的目录，这两步和[AutoDL帮助文档](https://www.autodl.com/docs/qa1/)里的一样，用完降到了76.79%。
 ```bash
@@ -34,6 +34,7 @@ du -sh /root/.cache
 du -sh xxx
 ```
 排查结果为只有这四个文件比较大，`/usr/`最好不要动，`/root/`里面是`/miniconda/`占的空间为主，可以清理，`/opt/`里只有`/nvidia/`也不能删，`/CONDA_PKGS/`需要处理。
+
 |文件夹名|所占空间|是否能清理|
 |--|--|--|
 | `/usr/` | 9.2G |❌|
@@ -41,9 +42,10 @@ du -sh xxx
 | `/opt/` | 1.4G |❌用 GPU 的话别删|
 | `/CONDA_PKGS/` | 11G |✅出现在`/`目录下很不合理，可能是配环境的时候设置错了|
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sys_check1.png?raw=true" width="100%">
 
-<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sys_check2.png?raw=true" width="100%">
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sys_check1.png?raw=true" width="80%">
+
+<img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sys_check2.png?raw=true" width="80%">
 
 首先看了miniconda3里的虚拟环境路径下有两个已经不需要了的虚拟环境，进行删除。
 <img src="https://github.com/Sihan0229/Sihan0229.github.io/blob/master/assets/sys_envs_delete.png?raw=true" width="100%">
@@ -60,7 +62,7 @@ conda env remove -n xxxxxxx #环境名
 
 
 然后移动一下`/CONDA_PKGS/`，这个文件夹里的东西不应该出现在`/`目录下，可能是直接运行开源代码的时候没有改原作者的路径，导致出现在了`/`目录下，如果还需要的话，进行这样的移动：
-1. 查看自己服务器的CONDA_pkgs路径
+查看自己服务器的CONDA_pkgs路径
 ```bash
  conda config --show pkgs_dirs
 ```
@@ -71,7 +73,7 @@ pkgs_dirs:
   - /root/miniconda3/pkgs
   - /root/.conda/pkgs
 ```
-2. 移动`/CONDA_PKGS/`到正确的位置，并删除原始的`/CONDA_PKGS/`文件夹。
+移动`/CONDA_PKGS/`到正确的位置，并删除原始的`/CONDA_PKGS/`文件夹。
 
 ```bash
 mv /CONDA_PKGS/* /root/miniconda3/pkgs
