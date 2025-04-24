@@ -3,6 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+</style>
 
 # **Sihan Gao**
 
