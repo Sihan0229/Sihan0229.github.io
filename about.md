@@ -5,17 +5,15 @@ permalink: /about/
 ---
 <style>
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family:  "Arial";
 }
 </style>
 
 # **Sihan Gao**
 
-📍 *No. 28, West Xianning Road, Xi'an, China*  
-📧 **Email:**  
-[2193224579@stu.xjtu.edu.cn](mailto:2193224579@stu.xjtu.edu.cn)  
-[gaosihan2025@ia.ac.cn](mailto:gaosihan2025@ia.ac.cn)  
-[sihangao2004@gmail.com](mailto:sihangao2004@gmail.com)
+📍 *No. 28, West Xianning Road, Xi'an, China*
+📧 **Email:**
+[2193224579@stu.xjtu.edu.cn](mailto:2193224579@stu.xjtu.edu.cn)   [gaosihan2025@ia.ac.cn](mailto:gaosihan2025@ia.ac.cn)   [sihangao2004@gmail.com](mailto:sihangao2004@gmail.com)
 
 ---
 
@@ -29,11 +27,11 @@ In **August 2025**, I will begin my Ph.D. studies in **Pattern Recognition and I
 
 ## 🧠 Research Interests
 
-- Medical Image Analysis  
-- Brain-Inspired Artificial Intelligence 
-- Cortical Surface Reconstruction  
-- Transformer Fault Diagnosis (Dissolved Gas Analysis)  
-- Computer Vision & Deep Learning  
+- Medical Image Analysis
+- Brain-Inspired Artificial Intelligence
+- Cortical Surface Reconstruction
+- Transformer Fault Diagnosis (Dissolved Gas Analysis)
+- Computer Vision & Deep Learning
 
 ---
 
