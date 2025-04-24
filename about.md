@@ -12,8 +12,11 @@ body {
 # **Sihan Gao**
 
 📍 *No. 28, West Xianning Road, Xi'an, China*
+
 📧 **Email:**
-[2193224579@stu.xjtu.edu.cn](mailto:2193224579@stu.xjtu.edu.cn)   [gaosihan2025@ia.ac.cn](mailto:gaosihan2025@ia.ac.cn)   [sihangao2004@gmail.com](mailto:sihangao2004@gmail.com)
+[2193224579@stu.xjtu.edu.cn](mailto:2193224579@stu.xjtu.edu.cn)
+[gaosihan2025@ia.ac.cn](mailto:gaosihan2025@ia.ac.cn)
+[sihangao2004@gmail.com](mailto:sihangao2004@gmail.com)
 
 ---
 
