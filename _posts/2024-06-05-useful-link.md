@@ -15,6 +15,7 @@ excerpt: "各种很好用的配置方法"
 
  [把正在运行的程序放到后台继续](https://blog.51cto.com/lhrbest/5095909)
 
+ [Linux服务器非root用户安装GCC](https://zhuanlan.zhihu.com/p/610194602)
 
 # git使用
 [生成新的 SSH 密钥并将其添加到 ssh-agent](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
