@@ -17,6 +17,8 @@ excerpt: "各种很好用的配置方法"
 
  [Linux服务器非root用户安装GCC](https://zhuanlan.zhihu.com/p/610194602)
 
+ [facebookresearch pytorch3d install.md](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md)
+
 # git使用
 [生成新的 SSH 密钥并将其添加到 ssh-agent](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
