@@ -3,7 +3,7 @@ layout: post
 title: "【环境配置】解决conda创建环境报错 failed with repodata from current_repodata.json"  
 date: 2025-04-12 00:10 +0800  
 last_modified_at: 2025-04-12 00:10 +0800  
-tags: [configuration]  
+tags: [Configuration]  
 math: true  r
 toc: true  
 excerpt: "使用anaconda创建新环境报错failed with repodata from current_repodata.json，在原始环境创建命令后添加 --repodata-fn=repodata.json -y"
