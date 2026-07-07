@@ -3,7 +3,7 @@ layout: post
 title: "【环境配置】实用教程合集"  
 date: 2024-06-05 00:10 +0800  
 last_modified_at: 2024-06-05 14:00 +0800  
-tags: [Course Note]  
+tags: [Configuration]  
 math: true  r
 toc: true  
 excerpt: "各种很好用的配置方法"

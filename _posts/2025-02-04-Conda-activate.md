@@ -3,7 +3,7 @@ layout: post
 title: "【环境配置】解决Conda activate激活环境ERROR"  
 date: 2025-02-04 00:10 +0800  
 last_modified_at: 2025-02-05 00:10 +0800  
-tags: [configuration]  
+tags: [Configuration]  
 math: true  r
 toc: true  
 excerpt: "已经初始化Conda但仍然报错CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'."

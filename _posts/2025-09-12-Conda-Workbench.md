@@ -3,7 +3,7 @@ layout: post
 title: "【环境配置】在新服务器上配置Anaconda和Connectome Workbench"  
 date: 2025-09-02 00:10 +0800  
 last_modified_at: 2025-09-12 00:10 +0800  
-tags: [configuration]  
+tags: [Configuration]  
 math: true  r
 toc: true  
 excerpt: "快速配置需要的环境变量"
