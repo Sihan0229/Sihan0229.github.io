@@ -50,5 +50,3 @@ conda clean --all -y
 #2. 关闭 Conda 的 repodata.json 处理优化
 conda create --name cortexode python=3.8 --repodata-fn=repodata.json -y
 ```
-
-成功解决
