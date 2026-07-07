@@ -1,14 +1,14 @@
 ---
 layout: post  
-title: "【环境配置】解决下载FreeSurfer后SFTP无法登录服务器的问题"  
-date: 2025-12-27 00:10 +0800  
-last_modified_at: 2025-12-28 00:10 +0800  
-tags: [Configuration]  
+title: "【Agent】开源LLMs名称后缀含义"  
+date: 2026-7-5 00:10 +0800  
+last_modified_at: 2026-7-7 00:10 +0800  
+tags: [Agent]  
 math: true  r
 toc: true  
-excerpt: "FreeSurfer的终端输出污染 SFTP 协议通道"
+excerpt: "开源LLMs名称后缀含义"
 ---
-# 【Agent】开源LLMs名称后缀
+# 【Agent】开源LLMs名称后缀含义
 
 如果你经常在 Hugging Face、ModelScope、Ollama、LM Studio、llama.cpp 社区里下载模型，会看到很多类似下面这样的名字：
 
@@ -733,7 +733,7 @@ mmproj-model-name-F16.gguf
 
 ---
 
-## 16. MTP 
+## 16. MTP
 
 ```text
 MTP-enabled
@@ -745,3 +745,5 @@ MTP-Q4_K_M
 但 MTP 需要推理框架支持。不是所有 llama.cpp、vLLM、SGLang 版本都能正确使用 MTP head。
 
 如果你只是普通聊天，优先下载非 MTP 版本即可。只有在明确知道自己的推理框架支持 MTP 时，再考虑 MTP 文件。
+
+更多可以参考[大模型命名后缀解析：看懂参数、量化、蒸馏、微调标识，快速筛选适配本地模型19.6](https://bbs.huaweicloud.com/blogs/481056)
