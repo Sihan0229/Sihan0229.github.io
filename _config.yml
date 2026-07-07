@@ -1,7 +1,7 @@
 # Site settings
 title: Sihan Blog
 SEOTitle: Sihan Blog
-header-img: img/post-bg-desk.jpg
+header-img: img/post-bg-sw.jpg
 email: sihangao2004@gmail.com
 description: "Neither do people light a lamp and put it under a bowl. Instead they put it on its stand, and it gives light to everyone in the house."
 keyword: "GSH, Sihan Blog, gaosihan, sihangao"
@@ -20,6 +20,7 @@ sidebar-avatar: /img/about-SH.jpg      # use absolute URL, seeing it's used in b
 RSS: false
 zhihu_username:     rowena-40
 github_username:    sihan0229
+gmail_username:     sihangao2004
 
 
 
